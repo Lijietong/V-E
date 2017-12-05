@@ -1,0 +1,257 @@
+﻿*{
+    margin:0;
+    padding:0;
+    border:0
+}
+.header{
+    width:100%;
+    height:255px;
+    
+}
+.top{
+    width:100%;
+    height:30px;
+    background-color:#efece7;   
+}
+.rol{
+    margin-top:6px;
+}
+.rol_left{
+    width:40%;
+    height:29px;
+    float:left;
+}
+.rol_right{
+    width:40%;
+    height:29px;
+    float:right;
+}
+.rol_left li{
+    float:left;
+}
+.rol_right li{
+    float:right;
+}
+.rol_left li a{
+	padding:0 20px;
+    text-align:center;
+	font-size:16px;
+	text-decoration:none;
+    color:#000;
+}
+.rol_right li a{
+	padding:0 20px 0 0;
+    text-align:center;
+	font-size:16px;
+	text-decoration:none;
+    color:#000;
+}
+.center{
+    width:100%;
+    height:170px;
+    background-color:#efece7;
+}
+.logo{
+    width:240px;
+    height:158px;
+    margin-left:150px;
+    float:left;
+    background-image:url("../images/Logo.jpg");
+    
+}
+.slogan{
+    width:350px;
+    height:150px;
+    float:left
+}
+.search{
+    width:300px;
+    height:60px;
+    margin-top:50px;
+    margin-right:100px;
+    float:right;
+    background-image:url("../images/Site/sousuo2.jpg");
+    background-size:300px 60px;
+    background-repeat:no-repeat;
+    border-radius:10px;
+    -moz-border-radius: 15px; 
+    -webkit-border-radius: 15px;
+}
+.txtsousuo{
+    width:237px;
+    height:37px;
+    margin-top:11px;
+    margin-left:9px;
+    border:none;
+    float:left;
+    font-size:16px;
+    padding-top:2px;
+    border-radius:4px
+}
+.btnsousuo{
+    width:50px;
+    height:50px;
+    margin-right:1px;
+    margin-top:5px;
+    float:right;
+    border:hidden;
+    opacity:0;
+    cursor:pointer;
+}
+.clear{
+    clear:both;
+    height:1px
+}
+.bottom{
+    width:100%;
+    height:52px;
+    margin-bottom:0;
+}
+/*body {
+	font-family:"Microsoft Yahei",Arial,Helvetica,sans-serif;
+	margin:0px;
+	padding:0px;
+	font-size:16px;
+	min-width:1200px;
+    color:#fff;
+}*/
+/*fieldset,img {
+	border:none;
+}
+input,select,textarea {
+	font-family:"Microsoft Yahei",Arial,Helvetica,sans-serif;
+	font-size:100%;
+	outline:none;
+}
+ul,li,dl,dt,dd,form,p,b,i,input,h1,h2,h3,h4,h5,td,th {
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	font-style:normal;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+.nav {
+	height:50px;
+	background:#3cf;
+	position:relative;
+}
+.nav li {
+	float:left;
+	height:50px;
+}
+.nav li a {
+	display:block;
+	height:50px;
+	line-height:50px;
+	padding:0 20px;
+	min-width:100px;
+	text-align:center;
+	font-size:24px;
+	color:#fff;
+	position:relative;
+	z-index:10;
+	text-decoration:none;
+}
+.nav li a:hover {
+	text-decoration:none;
+}
+.gl {
+	position:absolute;
+	top:0;
+	left:0;
+	height:50px;
+	background:#3cc;
+	z-index:9;
+	width:140px;
+}*/
+ /*导航*/
+
+ul, li { 
+    list-style:none;
+
+}
+a { 
+    text-decoration:none;
+
+}
+.nav { 
+     
+    border-right:none; 
+    overflow:hidden; 
+    float:left; 
+    margin-left:18%;
+}
+.nav ul li { 
+    float:left;
+}
+.nav ul li a { 
+    width:140px;                
+    height:50px;                
+    text-align:center;                
+    line-height:50px;                
+    display:block;                                
+    background:#fff;                
+    color:#000;               
+    border:1px solid 1px;           
+    font-size:20px;
+    font-weight:bolder;
+}
+.nav ul li a:hover{ 
+    color:#3cf; 
+    background-color:#efece7;
+
+}
+.nav ul li ul { 
+    position:absolute;
+    display:none;
+}
+.nav ul li ul li { 
+    float:none;
+
+}
+.nav ul li ul li a {
+    border-right: none;
+    border-top: 1px dotted #ccc;
+    background-color:#efece7;
+}
+.nav ul li:hover ul{ display:block; }
+/*底部*/
+.footer{
+    clear:both;
+    width:100%;
+    height:200px;
+    margin-bottom:-20px;
+    background-color:#efece7;
+    background-size:100% 200px;
+    margin-top:20px;
+    color:#000;
+}
+   #copyright{
+    float:left;
+    font-size:15px;
+    line-height:30px;
+    margin-left:3%;
+    margin-top:3.5%;
+}
+#aboutus,#contactus,#shareus{
+    float:left;
+    font-size:15px;
+    line-height:20px;
+    margin-left:10%;
+    margin-top:3.5%;
+}
+.bottomtext{
+    font-size:15px;
+}
+#shareus img{
+    width:40px;
+    height:35px;
+    margin:0 5px;
+}
+.footer a{
+    text-decoration:none;
+    color:#000;
+}

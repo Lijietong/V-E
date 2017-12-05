@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WEB.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>V教育</title>
+    <link href="CSS/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="header">
+            <div class="top">
+                 <div class="rol">
+                    <div class="rol_left">
+                        <ul>
+                            <li><a href="###">学生</a></li>
+                            <li><a href="###">教师</a></li>
+                            <li><a href="###">商家</a></li>     
+                        </ul>      
+                    </div>
+                    <div class="rol_right">
+                        <ul>
+                            <li><a href="#">注册</a></li>
+                            <li><a href="#">登录</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                 </div>           
+            </div>
+            <div class="center">
+                <div class="logo"></div>
+                <div class="slogan"></div>
+                <div class="search">
+                    <asp:TextBox ID="txtsousuo" runat="server" CssClass="txtsousuo" text=""></asp:TextBox><asp:Button ID="btnsouduo" runat="server" Text="" CssClass="btnsousuo" OnClick="btnsouduo_Click" />            
+                </div>               
+                <div class="clear"></div>
+            </div>
+            <div class="bottom">
+                <div class="nav"> 
+                   
+                       <ul>
+			            <li><a href="###">首页</a></li>
+			            <li><a href="###">学生之家</a>
+                            <ul>
+                                <li><a href="###">基本信息</a></li>
+                                <li><a href="###">修改密码</a></li>
+                                <li><a href="###">培养方案</a></li>
+                                <li><a href="###">家长登录</a></li>
+                                <li><a href="###">意见箱</a></li>
+                            </ul>
+			            </li>
+			            <li><a href="###">教工园地</a>
+                            <ul>
+                                <li><a href="###">基本信息</a></li>
+                                <li><a href="###">修改密码</a></li>
+                                <li><a href="###">视频课程</a></li>
+                                <li><a href="###">意见箱</a></li>
+                            </ul>
+			            </li>
+			            <li><a href="###">机构平台</a></li>
+			            <li><a href="###">名师讲堂</a></li>
+			            <li><a href="###">交流天地</a>
+                            <ul>
+                                <li><a href="###">小学</a></li>
+                                <li><a href="###">初中</a></li>
+                                <li><a href="###">高中</a></li>
+                            </ul>
+			            </li>
+                        <li><a href="###">教辅推荐</a>
+                            <ul>
+                                <li><a href="###">语文</a></li>
+                                <li><a href="###">数学</a></li>
+                                <li><a href="###">英语</a></li>
+                                <li><a href="###">文综</a></li>
+                                <li><a href="###">理综</a></li>
+                            </ul>
+                        </li>
+		           </ul>     
+                   
+                    
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="contents">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+                <h3>这是内容</h3>
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            <div id="copyright">
+                <p>
+                    技术支持：V-Education工作室<br />
+                    友情链接：<a href="http://www.jxedu.gov.cn/" target="_blank">江西省教育厅</a>丨<a href="http://www.jxnu.edu.cn" target="_blank">江西师范大学</a><br />
+                    地址：江西省南昌市紫阳大道99号江西师范大学<a href="Map.html" target="_blank">[显示地址]</a><br />
+                    Copyright 2017 V-Education.All Right Reserved.
+                </p>
+            </div>
+            <div id="aboutus">
+                <p>关于我们</p><br />
+                <p class="bottomtext"><a href="#" target="_blank">项目团队</a></p><br />
+                <p class="bottomtext"><a href="#" target="_blank">项目背景</a></p><br />
+                <p class="bottomtext"><asp:LinkButton ID="houtairukou" runat="server" OnClick="houtairukou_Click">后台入口</asp:LinkButton></p>
+            </div>
+            <div id="contactus">
+                <p>联系我们</p>
+                <p class="bottomtext"><a href="#" target="_blank">Weibo：@V-Education</a></p>
+                <p class="bottomtext">TelePhone：0791-6666666</p>
+                <p class="bottomtext"><a href="#" target="_blank">Email：Suggest@V-Education.com</a></p>
+            </div>
+            <div id="shareus">
+                <p>分享我们</p>
+                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=674689484&site=qq&menu=yes">
+                    <img src="images/ShareUs/qq.gif" /></a>
+                <a target="_blank" href="http://weibo.com/u/3976320063/">
+                    <img src="images/ShareUs/wb.gif" /></a>
+                <a target="_blank" href="http://weixin.qq.com">
+                    <img src="images/ShareUs/wx.gif" /></a>
+            </div>
+        </div>     
+    </div>
+    </form>
+</body>
+</html>
