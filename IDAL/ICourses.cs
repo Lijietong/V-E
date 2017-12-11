@@ -10,6 +10,8 @@ namespace IDAL
 {
     public interface ICourses
     {
-
+        DataTable SelectxxTop3();
+        DataTable SelectczTop3();
+        DataTable SelectgzTop3();
     }
 }

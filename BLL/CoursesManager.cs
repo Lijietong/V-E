@@ -13,6 +13,17 @@ namespace BLL
     public class CoursesManager
     {
         private static ICourses icourses = DataAccess.CreateCourses();
-
+        public static DataTable SelectxxTop3()
+        {
+            return icourses.SelectxxTop3();
+        }
+        public static DataTable SelectczTop3()
+        {
+            return icourses.SelectczTop3();
+        }
+        public static DataTable SelectgzTop3()
+        {
+            return icourses.SelectgzTop3();
+        }
     }
 }

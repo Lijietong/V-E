@@ -10,7 +10,7 @@ namespace IDAL
 {
     public interface IReply
     {
-        DataTable SelectByCommentId(int id);
-        int Insert(Reply reply);
+        //DataTable SelectByCommentId(int id);
+        //int Insert(Reply reply);
     }
 }

@@ -13,6 +13,9 @@ namespace BLL
     public class TeachersManager
     {
         private static ITeachers iteachers = DataAccess.CreateTeachers();
-
+        public static DataTable SelectTop4()
+        {
+            return iteachers.SelectTop4();
+        }
     }
 }

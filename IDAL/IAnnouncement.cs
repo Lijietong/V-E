@@ -10,5 +10,6 @@ namespace IDAL
 {
     public interface IAnnouncement
     {
+        DataTable SelectContents();
     }
 }

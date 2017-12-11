@@ -11,7 +11,9 @@ namespace IDAL
 {
     public interface IActivities
     {
-        DataTable SelectTop5();
+        DataTable SelectxxTop4();
+        DataTable SelectczTop4();
+        DataTable SelectgzTop4();
         int InsertActivity(Activities activities);
         int DeleteActivity(int Act_id);
 

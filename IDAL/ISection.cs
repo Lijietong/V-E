@@ -10,6 +10,6 @@ namespace IDAL
 {
     public interface ISection
     {
-        DataTable selectNewsID(int NewID);
+        //DataTable selectNewsID(int NewID);
     }
 }

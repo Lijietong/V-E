@@ -10,9 +10,9 @@ namespace IDAL
 {
     public interface IComments
     {
-        DataTable SelectComments(int ActID);
-        int InsertComments(Comments comments);
-        DataTable SelectAllComments();
-        int DeleteComments(int ComID);
+        //DataTable SelectComments(int ActID);
+        //int InsertComments(Comments comments);
+        //DataTable SelectAllComments();
+        //int DeleteComments(int ComID);
     }
 }

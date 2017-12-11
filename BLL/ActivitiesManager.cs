@@ -21,9 +21,17 @@ namespace BLL
         {
             return iactivities.DeleteActivity(Act_id);
         }
-        public static DataTable SelectTop5()
+        public static DataTable SelectxxTop4()
         {
-            return iactivities.SelectTop5();
+            return iactivities.SelectxxTop4();
+        }
+        public static DataTable SelectczTop4()
+        {
+            return iactivities.SelectczTop4();
+        }
+        public static DataTable SelectgzTop4()
+        {
+            return iactivities.SelectgzTop4();
         }
 
     }

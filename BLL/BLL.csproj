@@ -46,7 +46,7 @@
     <Compile Include="CommentsManager.cs" />
     <Compile Include="CoursesManager.cs" />
     <Compile Include="ExercisesManager.cs" />
-    <Compile Include="NewsManager.cs" />
+    <Compile Include="ArticleManager.cs" />
     <Compile Include="OrdersManager.cs" />
     <Compile Include="Order_itemsManager.cs" />
     <Compile Include="PostManager.cs" />

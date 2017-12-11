@@ -11,8 +11,8 @@ namespace IDAL
 {
     public interface IAdminister
     {
-        DataTable SelectAdminister(string Adm_id);
-        SqlDataReader Login(string Name, string pwd);
+        //DataTable SelectAdminister(string Adm_id);
+        //SqlDataReader Login(string Name, string pwd);
     }
 }
 

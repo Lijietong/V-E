@@ -13,5 +13,9 @@ namespace BLL
     public class AnnouncementManager
     {
         private static IAnnouncement iannouncement = DataAccess.CreateAnnouncement();
+        public static DataTable SelectContents()
+        {
+            return iannouncement.SelectContents();
+        }
     }
 }

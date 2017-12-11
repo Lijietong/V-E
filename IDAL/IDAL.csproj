@@ -46,7 +46,7 @@
     <Compile Include="IComments.cs" />
     <Compile Include="ICourses.cs" />
     <Compile Include="IExercises.cs" />
-    <Compile Include="INews.cs" />
+    <Compile Include="IArticle.cs" />
     <Compile Include="IOrders.cs" />
     <Compile Include="IOrder_items.cs" />
     <Compile Include="IPost.cs" />

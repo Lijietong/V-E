@@ -1,5 +1,5 @@
-@charset "utf-8";
-
+﻿@charset "utf-8";
+/*首页轮播图样式*/
 *{
 	box-sizing: border-box;
 }
@@ -13,7 +13,6 @@ img{
 	max-width: 100%;
 	vertical-align: middle;
 }
-
 
 
 .js-silder{
@@ -116,4 +115,159 @@ img{
 		border-radius: 50%;
 		padding: 0;
 	}
+}
+
+/*内容样式*/
+a{color:#000;}
+.primary{
+    width:70%;
+    margin-left:15%;
+    padding-left:15px;
+    padding-top:10px;
+    height:50px;
+    font-size:24px;
+    font-family:'Microsoft YaHei UI';
+    font-weight:bold;
+    padding-left:20px;
+    background-color:#fff;
+}
+.p_contents{
+    width:70%;
+    margin-left:15%;
+    height:610px;   
+    background-color:#fff;
+    float:left;
+}
+.best_courses{
+    width:65%;
+    height:270px;
+    float:left;
+    
+}
+.courses_h {
+    height:40px;
+    background-color:#efece7;
+}
+.best{
+    padding-left:10px;
+    font-size:20px;
+    font-family:'Microsoft YaHei UI';
+    font-weight:bold;
+    float:left;
+    padding-top:5px;
+}
+.more{
+    padding-right:2px;
+    font-size:16px;
+    float:right;
+    padding-top:10px;
+}
+.courses_f{
+    height:230px;
+    border:2px;
+    border-color:#3cf;
+}
+.paihang{
+    width:30%;
+    height:270px;
+    float:right;
+}
+.paihang_h{
+    height:40px;
+    width:100%;
+    padding-top:5px;
+    padding-left:10px;
+    font-size:20px;
+    font-family:'Microsoft YaHei UI';
+    font-weight:bold;
+    float:left;
+    background-color:#efece7;
+}
+.paihang_f{
+    height:230px;
+    border:2px;
+    border-color:#3cf;
+}
+.clear{ clear:both;height:0px;background-color: #fff;width: 70%;margin-left: 15%;}
+.hotact{
+    width:65%;
+    height:320px;
+    float:left;
+}
+.hotact_h{
+    width:100%;
+    height:40px;
+    padding-left:10px;
+    font-size:20px;
+    font-family:'Microsoft YaHei UI';
+    font-weight:bold;
+    float:left;
+    padding-top:5px;
+    background-color:#efece7;
+}
+.hotact_f{
+    height:280px;
+    border:2px;
+    border-color:#3cf;
+}
+.article{
+    width:30%;
+    height:320px;
+    float:right;
+}
+.article_h{
+    height:40px;
+    width:100%;
+    padding-top:5px;
+    padding-left:10px;
+    font-size:20px;
+    font-family:'Microsoft YaHei UI';
+    font-weight:bold;
+    float:left;
+    background-color:#efece7;
+}
+.article_f{
+    height:280px;
+    border:2px;
+    border-color:#3cf;
+}
+.junior{
+    width:70%;
+    margin-left:15%;
+    padding-left:15px;
+    padding-top:10px;
+    height:50px;
+    font-size:24px;
+    font-family:'Microsoft YaHei UI';
+    font-weight:bold;
+    padding-left:20px;
+    background-color:#fff;
+}
+.senior{
+    width:70%;
+    margin-left:15%;
+    padding-left:15px;
+    padding-top:10px;
+    height:50px;
+    font-size:24px;
+    font-family:'Microsoft YaHei UI';
+    font-weight:bold;
+    padding-left:20px;
+    background-color:#fff;
+}
+.teachers{
+    width:70%;
+    margin-left:15%;
+    display:flex;
+}
+.guess{
+    height:300px;
+    width:100%;
+}
+a:hover{
+    color:darkgreen;
+}
+.LBcname{
+    font-weight:500;
+    text-decoration:none;
 }

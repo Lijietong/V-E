@@ -49,7 +49,7 @@
     <Compile Include="SqlServerComments.cs" />
     <Compile Include="SqlServerCourses.cs" />
     <Compile Include="SqlServerExercises.cs" />
-    <Compile Include="SqlServerNews.cs" />
+    <Compile Include="SqlServerArticle.cs" />
     <Compile Include="SqlServerOrders.cs" />
     <Compile Include="SqlServerOrder_item.cs" />
     <Compile Include="SqlServerPost.cs" />

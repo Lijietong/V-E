@@ -14,5 +14,8 @@ namespace Models
         public DateTime Act_time { get; set; }
         public string Act_address { get; set; }
         public string Spo_id { get; set; }
+        public int Click_num { get; set; }
+        public string Act_images { get; set; }
+        public string Act_grade { get; set; }
     }
 }

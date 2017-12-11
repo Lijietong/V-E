@@ -48,10 +48,10 @@ namespace DALFactory
             string className = assemblyName + "." + db + "Exercises";
             return (IExercises)Assembly.Load(assemblyName).CreateInstance(className);
         }
-        public static INews CreateNews()
+        public static IArticle CreateArticle()
         {
-            string className = assemblyName + "." + db + "News";
-            return (INews)Assembly.Load(assemblyName).CreateInstance(className);
+            string className = assemblyName + "." + db + "Article";
+            return (IArticle)Assembly.Load(assemblyName).CreateInstance(className);
         }
         public static IOrder_items CreateOrder_items()
         {
@@ -102,7 +102,8 @@ namespace DALFactory
         {
             string className = assemblyName + "." + db + "Students";
             return (IStudents)Assembly.Load(assemblyName).CreateInstance(className);
-            public static ITeachers CreateTeachers()
+        }
+        public static ITeachers CreateTeachers()
         {
             string className = assemblyName + "." + db + "Teachers";
             return (ITeachers)Assembly.Load(assemblyName).CreateInstance(className);
@@ -117,11 +118,5 @@ namespace DALFactory
             string className = assemblyName + "." + db + "Video";
             return (IVideo)Assembly.Load(assemblyName).CreateInstance(className);
         }
-    }
-
-
-
-
-
     }
 }

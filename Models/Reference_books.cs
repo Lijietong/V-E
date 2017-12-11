@@ -14,5 +14,6 @@ namespace Models
         public string Ref_grade { get; set; }
         public string Ref_editor { get; set; }
         public string Ref_series { get; set; }
+        public int sale_num { get; set; }
     }
 }

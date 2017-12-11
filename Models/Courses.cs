@@ -14,5 +14,7 @@ namespace Models
         public int Cgrade { get; set; }
         public string Tec_id { get; set; }
         public string Spo_id { get; set; }
+        public string course_picture { get; set; }
+        public int Cclick_num { get; set; }
     }
 }

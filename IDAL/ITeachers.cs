@@ -10,5 +10,6 @@ namespace IDAL
 {
     public interface ITeachers
     {
+        DataTable SelectTop4();
     }
 }

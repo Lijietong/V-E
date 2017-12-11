@@ -10,5 +10,8 @@ namespace IDAL
 {
     public interface IReference_books
     {
+        DataTable SelectxxTop6();
+        DataTable SelectczTop6();
+        DataTable SelectgzTop6();
     }
 }

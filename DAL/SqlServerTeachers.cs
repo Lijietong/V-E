@@ -12,5 +12,10 @@ namespace DAL
 {
     public class SqlServerTeachers:ITeachers
     {
+        public DataTable SelectTop4()
+        {
+            string sql = "select top 4 * from teachers order by fans desc";
+            return DBHelper.GetFillData(sql);
+        }
     }
 }

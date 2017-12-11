@@ -31,12 +31,7 @@
                  </div>           
             </div>
             <div class="center">
-                <div class="logo"></div>
-                <div class="slogan"></div>
-                <div class="search">
-                    <asp:TextBox ID="txtsousuo" runat="server" CssClass="txtsousuo" text=""></asp:TextBox><asp:Button ID="btnsouduo" runat="server" Text="" CssClass="btnsousuo" OnClick="btnsouduo_Click" />            
-                </div>               
-                <div class="clear"></div>
+                <div class="logo"></div>               
             </div>
             <div class="bottom">
                 <div class="nav"> 
@@ -84,12 +79,14 @@
                 </div>
             </div>
         </div>
+        <hr  style="height:5px;background-color:#fff"/>
         <div class="clear"></div>
         <div class="contents">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
                 <h3>这是内容</h3>
             </asp:ContentPlaceHolder>
         </div>
+        <hr  style="height:5px;background-color:#fff"/>
         <div class="footer">
             <div id="copyright">
                 <p>

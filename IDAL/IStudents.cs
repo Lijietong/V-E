@@ -10,7 +10,7 @@ namespace IDAL
 {
     public interface IStudents
     {
-        DataTable selectInformationsBySno(string Sno);
-        int selectstudentsNum();
+        //DataTable selectInformationsBySno(string Sno);
+        //int selectstudentsNum();
     }
 }
