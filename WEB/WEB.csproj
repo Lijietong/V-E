@@ -61,7 +61,6 @@
   <ItemGroup>
     <Content Include="bin\WEB.dll" />
     <Content Include="bin\WEB.pdb" />
-    <Content Include="Comments.aspx" />
     <Content Include="CSS\index.css" />
     <Content Include="CSS\Site.css" />
     <Content Include="images\Index\junior\activity1.png" />
@@ -92,7 +91,6 @@
     <Content Include="images\Index\teacher\figure5.png" />
     <Content Include="images\Index\teacher\figure6.png" />
     <Content Include="images\Index\teacher\figure7.png" />
-    <Content Include="Index.aspx" />
     <Content Include="images\Index\5.jpg" />
     <Content Include="images\Index\6.jpg" />
     <Content Include="images\Index\7.jpg" />
@@ -118,6 +116,7 @@
     <Content Include="images\Site\sousuo2.jpg" />
     <Content Include="images\Site\wb.png" />
     <Content Include="images\Site\wx.png" />
+    <Content Include="Index.aspx" />
     <Content Include="JS\HomePage.js" />
     <Content Include="JS\jquery-1.11.3.min.js" />
     <Content Include="JS\lunbotu.js" />
@@ -130,13 +129,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comments.aspx.cs">
-      <DependentUpon>Comments.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Comments.aspx.designer.cs">
-      <DependentUpon>Comments.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

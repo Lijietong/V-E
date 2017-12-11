@@ -183,6 +183,7 @@
         </div>     
     </div><br /><br />
     <div class="clear"></div>
+    <div style="height: 15px; background-color: #fff;width: 70%;margin-left: 15%;"></div>
     <div style="height:50px;"></div>
     <div class="senior">高&nbsp;中&nbsp;冲&nbsp;刺</div>
     <div class="p_contents">
@@ -264,6 +265,7 @@
         </div>     
     </div><br /><br />
     <div class="clear"></div>
+    <div style="height: 15px; background-color: #fff;width: 70%;margin-left: 15%;"></div>
     <!--优秀教师-->
     <div style="height:50px;"></div>
     <hr  style="height:5px;width:45%;float:left;background-color:#fff;"/>

@@ -23,7 +23,7 @@
                     </div>
                     <div class="rol_right">
                         <ul>
-                            <li><a href="#">注册</a></li>
+                            <li><a href="#">注册</a></li>                            
                             <li><a href="#">登录</a></li>
                         </ul>
                     </div>
@@ -31,7 +31,8 @@
                  </div>           
             </div>
             <div class="center">
-                <div class="logo"></div>               
+                <div class="logo"></div>
+                <div class="username">欢迎您！<asp:Label ID="lbuser" runat="server" Text="Label"></asp:Label></div>               
             </div>
             <div class="bottom">
                 <div class="nav"> 
