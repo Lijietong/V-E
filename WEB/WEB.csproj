@@ -63,6 +63,15 @@
     <Content Include="bin\WEB.pdb" />
     <Content Include="CSS\index.css" />
     <Content Include="CSS\Site.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="CSS\popuo-box.css" />
+    <Content Include="images\Login\b2.jpg" />
+    <Content Include="images\Login\e-mail.png" />
+    <Content Include="images\Login\password.png" />
+    <Content Include="images\Login\tick.png" />
+    <Content Include="images\Login\user.png" />
+    <Content Include="JS\jquery-2.1.4.min.js" />
+    <Content Include="JS\jquery.magnific-popup.js" />
     <Content Include="images\Index\junior\activity1.png" />
     <Content Include="images\Index\junior\activity2.png" />
     <Content Include="images\Index\junior\activity3.png" />
@@ -127,6 +136,8 @@
     <Content Include="obj\Debug\WEB.dll" />
     <Content Include="obj\Debug\WEB.pdb" />
     <Content Include="Web.config" />
+    <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Index.aspx.cs">
@@ -144,6 +155,20 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -158,6 +183,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="html\css\" />
+    <Folder Include="html\images\" />
+    <Folder Include="html\js\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
