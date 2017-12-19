@@ -18,10 +18,9 @@ namespace WEB
         {
 
         }
-
-        protected void btnsouduo_Click(object sender, EventArgs e)
+        protected void Logobtn_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("Index.aspx");
         }
     }
 }

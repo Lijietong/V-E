@@ -8,11 +8,11 @@ namespace Models
 {
     public class Orders
     {
-        public string Order_no { get; set; }
-        public string Sno { get; set; }
+        public int Order_no { get; set; }
+        public int UserID { get; set; }
         public DateTime Order_date { get; set; }
-        public string Tot_amt { get; set; }
-        public string Addre { get; set; }
-        public string Tel { get; set; }
+        public decimal Tot_amt { get; set; }
+        public string Address { get; set; }
+        public string Telphone { get; set; }
     }
 }

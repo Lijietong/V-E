@@ -60,8 +60,17 @@ body{
     height:100px;
     margin-left:50px;
     float:left;
-    background-image:url("../images/Picture/Logo.png");
-    
+    background-image:url("../images/Picture/Logo.png");  
+    margin-top:10px; 
+}
+.Logobtn{
+    background-color:#efece7;
+    opacity:0;
+    border:none;
+    width:360px;
+    height:100px;
+    margin-left:70px;
+    cursor:pointer;
 }
 .username{
     width:15%;

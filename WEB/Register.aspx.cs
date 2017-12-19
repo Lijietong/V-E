@@ -35,14 +35,22 @@ namespace WEB
                     cmd.ExecuteNonQuery();
                     lblMsg.Text = "注册成功!";
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    lblMsg.Text = "用户注册失败，失败原因：" + ex.Message;
+                    
                 }
                 finally
                 {
                     if (cnn.State == ConnectionState.Open)
                         cnn.Close();
+                }
+                if(lblMsg.Text=="注册成功!")
+                {
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('注册成功！');location='Login.aspx'</script>");
+                }
+                else
+                {
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('用户名已使用！');location='Register.aspx'</script>");
                 }
             }
         }

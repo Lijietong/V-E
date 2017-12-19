@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link rel="stylesheet" href="CSS/index.css" />
-    <link rel="stylesheet" href="CSS/HomePage.css" />
     <script src="JS/jquery-1.11.3.min.js"></script>
     <script src="JS/wySilder.min.js"></script>
     <script src="JS/lunbotu.js"></script>
@@ -35,7 +34,7 @@
                         <table style="padding:20px">
                             <tr >
                                 <td >                  
-                                   <a href="#"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("course_picture") %>'  /></a>                  
+                                   <a href="#"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("course_picture") %>' /></a>                  
                                 </td>
                             </tr>
                            <tr>
@@ -58,7 +57,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="#"><%# Eval("Ref_name") %></a>
+                                <a href="#"><%# Eval("Books_name") %></a>
                             </td>
                         </tr>                              
                     </table>
@@ -139,7 +138,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="#"><%# Eval("Ref_name") %></a>
+                                <a href="#"><%# Eval("Books_name") %></a>
                             </td>
                         </tr>                              
                     </table>
@@ -221,7 +220,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="#"><%# Eval("Ref_name") %></a>
+                                <a href="#"><%# Eval("Books_name") %></a>
                             </td>
                         </tr>                              
                     </table>

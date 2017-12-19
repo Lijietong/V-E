@@ -8,8 +8,8 @@ namespace Models
 {
     public class Address
     {
-        public string Addr_id { get; set; }
-        public string Sno { get; set; }
-        public string Addr_name { get; set; }
+        public int AddressID { get; set; }
+        public int UserID { get; set; }
+        public string AddressPlace { get; set; }
     }
 }

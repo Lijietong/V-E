@@ -40,26 +40,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IActivities.cs" />
-    <Compile Include="IAddress.cs" />
     <Compile Include="IAdminister.cs" />
-    <Compile Include="IAnnouncement.cs" />
-    <Compile Include="IComments.cs" />
+    <Compile Include="IAddress.cs" />
+    <Compile Include="IMallComments.cs" />
     <Compile Include="ICourses.cs" />
-    <Compile Include="IExercises.cs" />
     <Compile Include="IArticle.cs" />
     <Compile Include="IOrders.cs" />
     <Compile Include="IOrder_items.cs" />
-    <Compile Include="IPost.cs" />
-    <Compile Include="IReference_books.cs" />
-    <Compile Include="IReply.cs" />
-    <Compile Include="ISA.cs" />
-    <Compile Include="ISection.cs" />
+    <Compile Include="IBooks.cs" />
+    <Compile Include="IReplyMallComments.cs" />
+    <Compile Include="IShopCart.cs" />
     <Compile Include="ISponsor.cs" />
-    <Compile Include="ISR.cs" />
     <Compile Include="IStudents.cs" />
     <Compile Include="ITeachers.cs" />
     <Compile Include="IUserInfo.cs" />
-    <Compile Include="IVideo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -13,5 +13,6 @@ namespace IDAL
         DataTable SelectxxTop3();
         DataTable SelectczTop3();
         DataTable SelectgzTop3();
+        
     }
 }

@@ -10,6 +10,6 @@ namespace IDAL
 {
     public interface IAddress
     {
-
+        
     }
 }

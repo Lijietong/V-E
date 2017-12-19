@@ -29,23 +29,23 @@ namespace DAL
         }
         public int InsertActivity(Activities activities)
         {
-            string sql = "insert into Activities(Act_id,Act_theme,Act_time,Act_content,Act_address,Spo_id,Act_images,Act_grade) values(@Act_id,@Act_theme,@Act_time,@Act_content,@Act_address,@Spo_id,@Act_images,@Act_grade,@Act_grade)";
+            string sql = "insert into Activities(ActID,Act_theme,Act_time,Act_content,Act_address,Spo_id,Act_images,Act_grade) values(@ActID,@Act_theme,@Act_time,@Act_content,@Act_address,@SpoID,@Act_images,@Act_grade)";
             SqlParameter[] para =
             {
-                new SqlParameter ("@Act_id",activities.Act_id),
+                new SqlParameter ("@ActID",activities.ActID),
                 new SqlParameter ("@Act_theme",activities.Act_theme),
                 new SqlParameter ("@Act_time",activities.Act_time),
                 new SqlParameter ("@Act_content",activities.Act_content),
                 new SqlParameter ("@Act_address",activities.Act_address),
-                new SqlParameter ("@Spo_id",activities.Spo_id),
+                new SqlParameter ("@SpoID",activities.SpoID),
                 new SqlParameter ("@Act_images",activities.Act_images),
                 new SqlParameter ("@Act_grade",activities.Act_grade)
             };
             return DBHelper.GetExcuteNonQuery(sql, para);
         }
-        public int DeleteActivity(int Act_id)
+        public int DeleteActivity(int ActID)
         {
-            SqlParameter[] sp = { new SqlParameter("@Act_id", Act_id) };
+            SqlParameter[] sp = { new SqlParameter("@ActID", ActID) };
             return DBHelper.GetExcuteNonQuery("DeleteActivity", System.Data.CommandType.StoredProcedure, sp);
         }
     }

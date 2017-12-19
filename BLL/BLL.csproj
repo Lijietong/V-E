@@ -40,27 +40,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivitiesManager.cs" />
-    <Compile Include="AddressManager.cs" />
     <Compile Include="AdministerManager.cs" />
-    <Compile Include="AnnouncementManager.cs" />
-    <Compile Include="CommentsManager.cs" />
+    <Compile Include="AddressManager.cs" />
     <Compile Include="CoursesManager.cs" />
-    <Compile Include="ExercisesManager.cs" />
     <Compile Include="ArticleManager.cs" />
+    <Compile Include="MallCommentsManager.cs" />
     <Compile Include="OrdersManager.cs" />
     <Compile Include="Order_itemsManager.cs" />
-    <Compile Include="PostManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reference_booksManager.cs" />
-    <Compile Include="ReplyManager.cs" />
-    <Compile Include="SAManager.cs" />
-    <Compile Include="SectionManager.cs" />
+    <Compile Include="BooksManager.cs" />
+    <Compile Include="ReplyMallCommentsManager.cs" />
+    <Compile Include="ShopCartManager.cs" />
     <Compile Include="SponsorManager.cs" />
-    <Compile Include="SRManager.cs" />
     <Compile Include="StudentsManager.cs" />
     <Compile Include="TeachersManager.cs" />
     <Compile Include="UserInfoManager.cs" />
-    <Compile Include="VideoManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DALFactory\DALFactory.csproj">

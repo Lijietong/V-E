@@ -36,7 +36,7 @@ namespace WEB
                 //userIdparam.Direction = ParameterDirection.Input;//设置参数的方向为输入参数
                 //userIdparam.Value = name;//设置参数的值为用户输入的用户名
                 //cmd.Parameters.Add(userIdparam);//将准备好的参数对象添加到Command对象中
-                cmd.Parameters.AddWithValue("@UserId", name);
+                cmd.Parameters.AddWithValue("@UserName", name);
 
                 //为Command对象准备@UserId参数
                 //SqlParameter passwordparam = new SqlParameter();//定义参数对象
@@ -58,7 +58,7 @@ namespace WEB
                     if (UserReader.Read())
                     {
                         //验证通过，保存用户名信息，并跳转到其它页面
-                        Session["UserID"] = name;
+                        Session["UserName"] = name;
                         Response.Redirect("~/Index.aspx");
                     }
                     else

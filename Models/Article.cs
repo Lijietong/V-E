@@ -8,7 +8,7 @@ namespace Models
 {
     public class Article
     {
-        public string Art_id { get; set; }
+        public int ArtID { get; set; }
         public string Art_content { get; set; }
         public string Art_theme { get; set; }
         public DateTime Release_time { get; set; }

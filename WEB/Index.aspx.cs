@@ -110,7 +110,7 @@ namespace WEB
         }
         private void BindxxReference_books()
         {
-            DataTable dt = Reference_booksManager.SelectxxTop6();
+            DataTable dt = BooksManager.SelectxxTop6();
             if (dt != null && dt.Rows.Count != 0)
             {
                 RPxxpaihang.DataSource = dt;
@@ -119,7 +119,7 @@ namespace WEB
         }
         private void BindczReference_books()
         {
-            DataTable dt = Reference_booksManager.SelectczTop6();
+            DataTable dt = BooksManager.SelectczTop6();
             if (dt != null && dt.Rows.Count != 0)
             {
                 RPczpaihang.DataSource = dt;
@@ -128,7 +128,7 @@ namespace WEB
         }
         private void BindgzReference_books()
         {
-            DataTable dt = Reference_booksManager.SelectgzTop6();
+            DataTable dt = BooksManager.SelectgzTop6();
             if (dt != null && dt.Rows.Count != 0)
             {
                 RPgzpaihang.DataSource = dt;

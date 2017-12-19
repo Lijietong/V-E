@@ -43,26 +43,20 @@
     <Compile Include="DBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerActivities.cs" />
-    <Compile Include="SqlServerAddress.cs" />
     <Compile Include="SqlServerAdminister.cs" />
-    <Compile Include="SqlServerAnnouncement.cs" />
-    <Compile Include="SqlServerComments.cs" />
+    <Compile Include="SqlServerAddress.cs" />
+    <Compile Include="SqlServerMallComments.cs" />
     <Compile Include="SqlServerCourses.cs" />
-    <Compile Include="SqlServerExercises.cs" />
     <Compile Include="SqlServerArticle.cs" />
     <Compile Include="SqlServerOrders.cs" />
     <Compile Include="SqlServerOrder_item.cs" />
-    <Compile Include="SqlServerPost.cs" />
-    <Compile Include="SqlServerReference_books.cs" />
-    <Compile Include="SqlServerReply.cs" />
-    <Compile Include="SqlServerSA.cs" />
-    <Compile Include="SqlServerSection.cs" />
+    <Compile Include="SqlServerBooks.cs" />
+    <Compile Include="SqlServerReplyMallComments.cs" />
+    <Compile Include="SqlServerShopCart.cs" />
     <Compile Include="SqlServerSponsor.cs" />
-    <Compile Include="SqlServerSR.cs" />
     <Compile Include="SqlServerStudents.cs" />
     <Compile Include="SqlServerTeachers.cs" />
     <Compile Include="SqlServerUserInfo.cs" />
-    <Compile Include="SqlServerVideo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DALFactory\DALFactory.csproj">

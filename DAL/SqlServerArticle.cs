@@ -19,10 +19,10 @@ namespace DAL
         }
         public int InsertArticle(Article article)
         {
-            string sql = "insert into Article(Art_id,Art_theme,Art_content,Release_time,Art_clicknum) values(@Art_id,@Art_theme,@Art_content,@Release_time,@Art_clicknum)";
+            string sql = "insert into Article(ArtID,Art_theme,Art_content,Release_time,Art_clicknum) values(@ArtID,@Art_theme,@Art_content,@Release_time,@Art_clicknum)";
             SqlParameter[] sp = new SqlParameter[]
             {
-                new SqlParameter("@Art_id",article.Art_id),
+                new SqlParameter("@ArtID",article.ArtID),
                 new SqlParameter("@Art_theme",article.Art_theme),
                 new SqlParameter("@Art_content",article.Art_content),
                 new SqlParameter("@Release_time",article.Release_time),
@@ -30,12 +30,12 @@ namespace DAL
             };
             return DBHelper.GetExcuteNonQuery(sql, sp);
         }
-        public int DeleteArticle(int Art_id)
+        public int DeleteArticle(int ArtID)
         {
-            string sql = "delete from Article where Art_id=@Art_id";
+            string sql = "delete from Article where ArtID=@ArtID";
             SqlParameter[] sp = new SqlParameter[]
             {
-                new SqlParameter("@Art_id", Art_id)
+                new SqlParameter("@ArtID", ArtID)
             };
             return DBHelper.GetExcuteNonQuery(sql, sp);
         }

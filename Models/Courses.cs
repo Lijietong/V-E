@@ -8,13 +8,14 @@ namespace Models
 {
     public class Courses
     {
-        public string Cno { get; set; }
+        public int Cno { get; set; }
         public string Cname { get; set; }
         public string Csubject { get; set; }
         public int Cgrade { get; set; }
-        public string Tec_id { get; set; }
-        public string Spo_id { get; set; }
+        public int TecID { get; set; }
+        public int SpoID { get; set; }
         public string course_picture { get; set; }
         public int Cclick_num { get; set; }
+        public string C_introduce { get; set; }
     }
 }

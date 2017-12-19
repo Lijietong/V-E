@@ -12,5 +12,6 @@ namespace DAL
 {
     public class SqlServerAddress:IAddress
     {
+        
     }
 }
