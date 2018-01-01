@@ -55,6 +55,7 @@
     <Compile Include="StudentsManager.cs" />
     <Compile Include="TeachersManager.cs" />
     <Compile Include="UserInfoManager.cs" />
+    <Compile Include="VideoManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DALFactory\DALFactory.csproj">

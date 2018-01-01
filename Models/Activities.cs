@@ -8,8 +8,7 @@ namespace Models
 {
     public class Activities
     {
-        public int 
-            ActID { get; set; }
+        public int ActID { get; set; }
         public string Act_theme { get; set; }
         public string Act_content { get; set; }
         public DateTime Act_time { get; set; }

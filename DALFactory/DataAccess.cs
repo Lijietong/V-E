@@ -85,8 +85,13 @@ namespace DALFactory
         }
         public static IUserInfo CreateUserInfo()
         {
-            string className = assemblyName + "." + db + "UserInfo ";
+            string className = assemblyName + "." + db + "UserInfo";
             return (IUserInfo)Assembly.Load(assemblyName).CreateInstance(className);
+        }
+        public static IVideo CreateVideo()
+        {
+            string className = assemblyName + "." + db + "Video";
+            return (IVideo)Assembly.Load(assemblyName).CreateInstance(className);
         }
     }
 }

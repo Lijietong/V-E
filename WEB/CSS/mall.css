@@ -43,11 +43,27 @@ body{
     float:left;
 }
 .shopcar{
-    width:150px;
+    width:180px;
     border-radius:5px;
     float:left;
     margin-left:50px;  
     margin-top:4px;
+}
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+    margin-left:-30px;
+    cursor:pointer
 }
 .btnshopcar{
     background-image:url("../images/mall/cart.png");
@@ -55,7 +71,7 @@ body{
     background-size:25px;
     background-color:red;
     border-radius:5px;
-    width:100px;
+    width:120px;
     height:30px;
     cursor:pointer;
     font-size:14px;
@@ -72,12 +88,12 @@ a{
     height:30px;    
 }
 .container{
-    height:400px;
+    height:500px;
     background-color:#f5dcc0;
     align-content:center;
 }
 .center{
-    height:300px;
+    height:400px;
     width:70%;
     background-color:#fff;
     margin-left:15%;
@@ -85,7 +101,7 @@ a{
 }
 .center_left{
     width:30%;
-    height:65%;
+    height:75%;
     float:left;
     margin-left:10%;
     border-radius:5px;
@@ -95,7 +111,7 @@ a{
 }
 .center_right{
     width:30%;
-    height:65%;
+    height:75%;
     float:right;
     margin-right:15%;
     border-radius:2px;
@@ -148,13 +164,26 @@ a{
     padding-top:10px;
     font-size:14px;
 }
-ul,li,a{
+.footer ul,li,a{
     text-decoration:none;
     list-style:none;
 }
 a:hover{
     cursor:pointer;
     color:darkseagreen;
+}
+/*加购物车按钮*/
+.BtnAdd{
+    background-color:#b22b2b;
+    width:100px;
+    height:40px;
+    font-size:16px;
+    color:#fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+.BtnAdd:hover{
+    background-color:#760a0a;
 }
 /*首页轮播图*/
 *{
@@ -274,3 +303,201 @@ img{
 		padding: 0;
 	}
 }
+/*商品展示*/
+.nav {
+       padding-left: 0;
+       margin-bottom: 0;
+       list-style: none;
+       margin-left:15%;
+}
+
+.nav > li {
+       position: relative;
+       display: block;
+}
+
+.nav > li > a {
+       position: relative;
+       display: block;
+       padding: 10px 15px;
+}
+
+ .nav > li > a:focus, .nav > li > a:hover {
+       text-decoration: none;
+       background-color: #eee;
+}
+
+.nav > li.disabled > a {
+       color: #777;
+        }
+
+            .nav > li.disabled > a:focus, .nav > li.disabled > a:hover {
+                color: #777;
+                text-decoration: none;
+                cursor: not-allowed;
+                background-color: transparent;
+            }
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+    background-color: #eee;
+    border-color: #337ab7;
+}
+
+.nav .nav-divider {
+    height: 1px;
+       margin: 9px 0;
+        overflow: hidden;
+        background-color: #e5e5e5;
+    }
+
+    .nav > li > a > img {
+        max-width: none;
+    }
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+
+    .nav-tabs > li {
+        float: left;
+        margin-bottom: -1px;
+    }
+
+        .nav-tabs > li > a {
+            margin-right: 2px;
+            line-height: 1.42857143;
+            border: 1px solid transparent;
+            border-radius: 4px 4px 0 0;
+        }
+
+            .nav-tabs > li > a:hover {
+                border-color: #eee #eee #ddd;
+            }
+
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+            color: #555;
+            cursor: default;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+        }
+
+    .nav-tabs.nav-justified {
+        width: 100%;
+        border-bottom: 0;
+    }
+
+        .nav-tabs.nav-justified > li {
+            float: none;
+        }
+
+            .nav-tabs.nav-justified > li > a {
+                margin-bottom: 5px;
+                text-align: center;
+            }
+
+.nav-tabs.nav-justified > .dropdown .dropdown-menu {
+            top: auto;
+            left: auto;
+        }
+
+@media (min-width:768px) {
+    .nav-tabs.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+
+        .nav-tabs.nav-justified > li > a {
+            margin-bottom: 0;
+        }
+}
+
+.nav-tabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:hover {
+    border: 1px solid #ddd;
+}
+
+@media (min-width:768px) {
+    .nav-tabs.nav-justified > li > a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:hover {
+        border-bottom-color: #fff;
+    }
+}
+.tab-content{
+    width:80%;
+    margin-left:10%; 
+}
+.tab-content > .tab-pane {
+    display: none;
+}
+
+.tab-content > .active {
+    display: block;
+}
+/*分页*/
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-default.focus, .btn-default:focus {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #8c8c8c;
+}
+
+.btn-default:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.btn-default.active, .btn-default:active, .open > .dropdown-toggle.btn-default {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open > .dropdown-toggle.btn-default.focus, .open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn-default:hover {
+    color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+}
+/* 数量加减按钮样式 */
+.pro_size .pro_size_a{
+	display: block;
+    background: #333;
+    color: #fff;
+    margin: 5px 5px 5px 0;
+    float: left;
+    width: 55px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: solid 1px #333;
+    border-radius: 2px;
+}
+.pro_right .pro_right_size{
+	padding: 20px 0;
+	height: 63px;
+	width: 100%;
+}
+.pro_right_size .pro_size{
+	height: 40px;
+}
+

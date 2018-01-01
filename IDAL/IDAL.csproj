@@ -54,6 +54,7 @@
     <Compile Include="IStudents.cs" />
     <Compile Include="ITeachers.cs" />
     <Compile Include="IUserInfo.cs" />
+    <Compile Include="IVideo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -22,9 +22,9 @@ namespace WEB
             BindxxArticle();
             BindczArticle();
             BindgzArticle();
-            BindxxReference_books();
-            BindczReference_books();
-            BindgzReference_books();
+            BindxxBooks();
+            BindczBooks();
+            BindgzBooks();
             BindTeachers();
         }
         private void BindxxCourses()
@@ -108,7 +108,7 @@ namespace WEB
                 RPgzArticle.DataBind();
             }
         }
-        private void BindxxReference_books()
+        private void BindxxBooks()
         {
             DataTable dt = BooksManager.SelectxxTop6();
             if (dt != null && dt.Rows.Count != 0)
@@ -117,7 +117,7 @@ namespace WEB
                 RPxxpaihang.DataBind();
             }
         }
-        private void BindczReference_books()
+        private void BindczBooks()
         {
             DataTable dt = BooksManager.SelectczTop6();
             if (dt != null && dt.Rows.Count != 0)
@@ -126,7 +126,7 @@ namespace WEB
                 RPczpaihang.DataBind();
             }
         }
-        private void BindgzReference_books()
+        private void BindgzBooks()
         {
             DataTable dt = BooksManager.SelectgzTop6();
             if (dt != null && dt.Rows.Count != 0)

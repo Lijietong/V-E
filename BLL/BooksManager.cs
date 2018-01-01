@@ -25,5 +25,21 @@ namespace BLL
         {
             return ibooks.SelectgzTop6();
         }
+        public static DataTable  SelectAllBooks()
+        {
+            return ibooks.SelectAllBooks();
+        }
+        public static DataTable SelectxxBooks()
+        {
+            return ibooks.SelectxxBooks();
+        }
+        public static DataTable SelectczBooks()
+        {
+            return ibooks.SelectczBooks();
+        }
+        public static DataTable SelectgzBooks()
+        {
+            return ibooks.SelectgzBooks();
+        }
     }
 }

@@ -57,6 +57,7 @@
     <Compile Include="SqlServerStudents.cs" />
     <Compile Include="SqlServerTeachers.cs" />
     <Compile Include="SqlServerUserInfo.cs" />
+    <Compile Include="SqlServerVideo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DALFactory\DALFactory.csproj">

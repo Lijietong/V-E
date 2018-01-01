@@ -13,5 +13,9 @@ namespace BLL
     public class MallCommentsManager
     {
         private static IMallComments imallcomments = DataAccess.CreateMallComments();
+        public static int InsertMallComments(MallComments mallcomments)
+        {
+            return imallcomments.InsertMallComments(mallcomments);
+        }
     }
 }

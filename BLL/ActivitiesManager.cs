@@ -17,9 +17,9 @@ namespace BLL
         {
             return iactivities.InsertActivity(activities);
         }
-        public static int DeleteActivity(int Act_id)
+        public static int DeleteActivity(int ActID)
         {
-            return iactivities.DeleteActivity(Act_id);
+            return iactivities.DeleteActivity(ActID);
         }
         public static DataTable SelectxxTop4()
         {

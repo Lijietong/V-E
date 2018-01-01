@@ -12,7 +12,7 @@ namespace IDAL
     {
         DataTable SelectHotArticle(int num);
         int InsertArticle(Article article);
-        int DeleteArticle(int Art_id);
+        int DeleteArticle(int ArtID);
         DataTable SelectxxTop8();
         DataTable SelectczTop8();
         DataTable SelectgzTop8();

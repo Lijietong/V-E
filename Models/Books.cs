@@ -14,5 +14,10 @@ namespace Models
         public string Books_grade { get; set; }
         public int Books_rest { get; set; }
         public int sale_num { get; set; }
+        public string images { get; set; }
+        public string introduce { get; set; }
+        public string Author { set; get; }
+        public DateTime Release_time { set; get; }
+        public decimal Price { get; set; }
     }
 }
