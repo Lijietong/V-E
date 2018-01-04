@@ -37,5 +37,9 @@ namespace BLL
         {
             return iarticle.SelectgzTop8();
         }
+        public static DataTable SelectArticle(int ArtID)
+        {
+            return iarticle.SelectArticle(ArtID);
+        }
     }
 }

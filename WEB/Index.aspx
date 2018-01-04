@@ -34,12 +34,12 @@
                         <table style="padding:20px">
                             <tr >
                                 <td >                  
-                                   <a href="#"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("course_picture") %>' /></a>                  
+                                   <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("Picture") %>' /></a>                  
                                 </td>
                             </tr>
                            <tr>
                                 <td style="text-align:center">
-                                    <asp:LinkButton ID="Cname" runat="server" CssClass="LBcname" ><%#DataBinder.Eval(Container.DataItem, "Cname")%></asp:LinkButton>   
+                                    <asp:LinkButton ID="Cname" runat="server" CssClass="LBcname" ><%#DataBinder.Eval(Container.DataItem, "GoodsName")%></asp:LinkButton>   
                                 </td>
                             </tr>           
                         </table>
@@ -57,7 +57,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="#"><%# Eval("Books_name") %></a>
+                               <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a>
                             </td>
                         </tr>                              
                     </table>
@@ -90,7 +90,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="#"><%# Eval("Art_theme") %></a>
+                               <a href="Article.aspx?id=<%# Eval("ArtID") %>"><%# Eval("Art_theme") %></a>
                             </td>
                         </tr>                              
                     </table>
@@ -115,12 +115,12 @@
                         <table style="padding:20px">
                             <tr >
                                 <td >                  
-                                   <a href="#"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("course_picture") %>'  /></a>                  
+                                   <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("Picture") %>'  /></a>                  
                                 </td>
                             </tr>
                            <tr>
                                 <td style="text-align:center">
-                                    <asp:LinkButton ID="Cname" runat="server" CssClass="LBcname" ><%#DataBinder.Eval(Container.DataItem, "Cname")%></asp:LinkButton>   
+                                    <asp:LinkButton ID="Cname" runat="server" CssClass="LBcname" ><%#DataBinder.Eval(Container.DataItem, "GoodsName")%></asp:LinkButton>   
                                 </td>
                             </tr>           
                         </table>
@@ -138,7 +138,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="#"><%# Eval("Books_name") %></a>
+                                <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a>
                             </td>
                         </tr>                              
                     </table>
@@ -172,7 +172,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="#"><%# Eval("Art_theme") %></a>
+                                <a href="Article.aspx?id=<%# Eval("ArtID") %>"><%# Eval("Art_theme") %></a>
                             </td>
                         </tr>                              
                     </table>
@@ -197,12 +197,12 @@
                         <table style="padding:20px">
                             <tr >
                                 <td >                  
-                                   <a href="#"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("course_picture") %>'  /></a>                  
+                                   <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("Picture") %>'  /></a>                  
                                 </td>
                             </tr>
                            <tr>
                                 <td style="text-align:center">
-                                    <asp:LinkButton ID="Cname" runat="server" CssClass="LBcname" ><%#DataBinder.Eval(Container.DataItem, "Cname")%></asp:LinkButton>   
+                                    <asp:LinkButton ID="Cname" runat="server" CssClass="LBcname" ><%#DataBinder.Eval(Container.DataItem, "GoodsName")%></asp:LinkButton>   
                                 </td>
                             </tr>           
                         </table>
@@ -220,7 +220,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="#"><%# Eval("Books_name") %></a>
+                                <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a>
                             </td>
                         </tr>                              
                     </table>
@@ -254,7 +254,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="#"><%# Eval("Art_theme") %></a>
+                                <a href="Article.aspx?id=<%# Eval("ArtID") %>"><%# Eval("Art_theme") %></a>
                             </td>
                         </tr>                              
                     </table>

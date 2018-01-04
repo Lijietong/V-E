@@ -45,19 +45,18 @@
     <Compile Include="SqlServerActivities.cs" />
     <Compile Include="SqlServerAdminister.cs" />
     <Compile Include="SqlServerAddress.cs" />
+    <Compile Include="SqlServerGoods.cs" />
     <Compile Include="SqlServerMallComments.cs" />
     <Compile Include="SqlServerCourses.cs" />
     <Compile Include="SqlServerArticle.cs" />
     <Compile Include="SqlServerOrders.cs" />
     <Compile Include="SqlServerOrder_item.cs" />
-    <Compile Include="SqlServerBooks.cs" />
     <Compile Include="SqlServerReplyMallComments.cs" />
-    <Compile Include="SqlServerShopCart.cs" />
+    <Compile Include="SqlServerShoppingCart.cs" />
     <Compile Include="SqlServerSponsor.cs" />
     <Compile Include="SqlServerStudents.cs" />
     <Compile Include="SqlServerTeachers.cs" />
     <Compile Include="SqlServerUserInfo.cs" />
-    <Compile Include="SqlServerVideo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DALFactory\DALFactory.csproj">

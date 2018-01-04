@@ -26,7 +26,19 @@ namespace DAL
             };
             return DBHelper.GetExcuteNonQuery(sql,para);
         }
-        
-
+        public DataTable SelectAllComments()
+        {
+            string sql = "select Photo,UserName,Comments_contents,GoodsID from UserInfo,Mallcomments where Mallcomments.UserID=UserInfo.UserID and Mallcomments.GoodsID=Goods.GoodsID";
+            return DBHelper.GetFillData(sql);
+        }
+        public int DeleteMallComments(int ComID)
+        {
+            string sql = "delete from ReplyMallComments where CommentsID=@ComID delete from MallComments where CommentsID=@ComID";
+            SqlParameter[] sp = new SqlParameter[]
+            {
+                new SqlParameter("@ComID",ComID)
+            };
+            return DBHelper.GetExcuteNonQuery(sql, sp);
+        }
     }
 }

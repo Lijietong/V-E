@@ -16,5 +16,6 @@ namespace IDAL
         DataTable SelectxxTop8();
         DataTable SelectczTop8();
         DataTable SelectgzTop8();
+        DataTable SelectArticle(int ArtID);
     }
 }

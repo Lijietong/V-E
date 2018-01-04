@@ -13,18 +13,19 @@ namespace WEB
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BindVideo();
+            BindAllVideo();
             BindxxVideo();
             BindczVideo();
             BindgzVideo();
             BindAllBooks();
             BindxxBooks();
             BindczBooks();
-            BindgzBooks();           
+            BindgzBooks();        
+               
         }
-        public void BindVideo()
+        public void BindAllVideo()
         {
-            DataTable dt = VideoManager.SelectAll();
+            DataTable dt = GoodsManager.SelectAllVideo();
             if(dt != null && dt.Rows.Count != 0)
             {
                 LVVideo.DataSource = dt;
@@ -33,7 +34,7 @@ namespace WEB
         }
         public void BindxxVideo()
         {
-            DataTable dt = VideoManager.SelectxxVideo();
+            DataTable dt = GoodsManager.SelectxxVideo();
             if (dt != null && dt.Rows.Count != 0)
             {
                 LVxxVideo.DataSource = dt;
@@ -42,7 +43,7 @@ namespace WEB
         }
         public void BindczVideo()
         {
-            DataTable dt = VideoManager.SelectczVideo();
+            DataTable dt = GoodsManager.SelectczVideo();
             if (dt != null && dt.Rows.Count != 0)
             {
                 LVczVideo.DataSource = dt;
@@ -51,7 +52,7 @@ namespace WEB
         }
         public void BindgzVideo()
         {
-            DataTable dt = VideoManager.SelectgzVideo();
+            DataTable dt = GoodsManager.SelectgzVideo();
             if (dt != null && dt.Rows.Count != 0)
             {
                 LVgzVideo.DataSource = dt;
@@ -60,7 +61,7 @@ namespace WEB
         }
         public void BindAllBooks()
         {
-            DataTable dt = BooksManager.SelectAllBooks();
+            DataTable dt = GoodsManager.SelectAllBooks();
             if(dt != null && dt.Rows.Count != 0)
             {
                 LVBooks.DataSource = dt;
@@ -69,7 +70,7 @@ namespace WEB
         }
         public void BindxxBooks()
         {
-            DataTable dt = BooksManager.SelectxxBooks();
+            DataTable dt = GoodsManager.SelectxxBooks();
             if (dt != null && dt.Rows.Count != 0)
             {
                 LVxxBooks.DataSource = dt;
@@ -78,7 +79,7 @@ namespace WEB
         }
         public void BindczBooks()
         {
-            DataTable dt = BooksManager.SelectczBooks();
+            DataTable dt = GoodsManager.SelectczBooks();
             if (dt != null && dt.Rows.Count != 0)
             {
                 LVczBooks.DataSource = dt;
@@ -87,7 +88,7 @@ namespace WEB
         }
         public void BindgzBooks()
         {
-            DataTable dt = BooksManager.SelectgzBooks();
+            DataTable dt = GoodsManager.SelectgzBooks();
             if (dt != null && dt.Rows.Count != 0)
             {
                 LVgzBooks.DataSource = dt;

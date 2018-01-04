@@ -10,7 +10,8 @@ namespace IDAL
 {
     public interface IReplyMallComments
     {
-        //DataTable SelectByCommentId(int id);
-        //int Insert(Reply reply);
+        int InsertReplyMallComments(ReplyMallComments replymallcomments);
+        DataTable SelectAllReplyMallComments();
+        int DeleteReplyMallComments(int ReplyMallComID);
     }
 }

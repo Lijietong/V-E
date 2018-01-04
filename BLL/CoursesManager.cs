@@ -25,5 +25,9 @@ namespace BLL
         {
             return icourses.SelectgzTop3();
         }
+        //public static DataTable SelectCourseByCno(int Cno)
+        //{
+        //    return icourses.SelectCourseByCno(Cno);
+        //}
     }
 }

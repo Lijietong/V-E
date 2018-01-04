@@ -53,20 +53,20 @@ namespace DALFactory
             string className = assemblyName + "." + db + "Orders";
             return (IOrders)Assembly.Load(assemblyName).CreateInstance(className);
         }
-        public static IBooks CreateBooks()
+        public static IGoods CreateGoods()
         {
-            string className = assemblyName + "." + db + "Books";
-            return (IBooks)Assembly.Load(assemblyName).CreateInstance(className);
+            string className = assemblyName + "." + db + "Goods";
+            return (IGoods)Assembly.Load(assemblyName).CreateInstance(className);
         }
         public static IReplyMallComments CreateReplyMallComments()
         {
             string className = assemblyName + "." + db + "ReplyMallComments";
             return (IReplyMallComments)Assembly.Load(assemblyName).CreateInstance(className);
         }
-        public static IShopCart CreateShopCart()
+        public static IShoppingCart CreateShoppingCart()
         {
-            string className = assemblyName + "." + db + "ShopCart";
-            return (IShopCart)Assembly.Load(assemblyName).CreateInstance(className);
+            string className = assemblyName + "." + db + "ShoppingCart";
+            return (IShoppingCart)Assembly.Load(assemblyName).CreateInstance(className);
         }
         public static ISponsor CreateSponsor()
         {
@@ -87,11 +87,6 @@ namespace DALFactory
         {
             string className = assemblyName + "." + db + "UserInfo";
             return (IUserInfo)Assembly.Load(assemblyName).CreateInstance(className);
-        }
-        public static IVideo CreateVideo()
-        {
-            string className = assemblyName + "." + db + "Video";
-            return (IVideo)Assembly.Load(assemblyName).CreateInstance(className);
         }
     }
 }

@@ -16,6 +16,6 @@ namespace IDAL
         DataTable SelectgzTop4();
         int InsertActivity(Activities activities);
         int DeleteActivity(int Act_id);
-
+       
     }
 }

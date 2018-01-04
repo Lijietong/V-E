@@ -79,12 +79,12 @@
                                                     </div>
                                                 </GroupTemplate>
                                                 <ItemTemplate>
-                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetailsl.aspx?id="+Eval("VideoID") %>"><image src="<%# Eval("Pictures") %>"></image></a></div>                                                  
+                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></div>                                                  
                                                 </ItemTemplate>
                                             </asp:ListView>     
                                             <div class="clear"></div>  
                                             <div style="text-align:center; margin-top:25px;">
-                                                <asp:DataPager runat="server" PagedControlID="LVVideo" PageSize="12" ID="DPVideo" OnPreRender="DPVideo_PreRender">
+                                                <asp:DataPager runat="server" PagedControlID="LVVideo" PageSize="15" ID="DPVideo" OnPreRender="DPVideo_PreRender">
                                                     <Fields>
                                                         <asp:NextPreviousPagerField ShowFirstPageButton="true" FirstPageText="首页" PreviousPageText="上一页" ShowNextPageButton="false" ButtonCssClass="btn-default btn-sm" />
                                                         <asp:NumericPagerField ButtonCount="3" NumericButtonCssClass="btn-default btn-sm" />
@@ -106,7 +106,7 @@
                                                     </div>
                                                 </GroupTemplate>
                                                 <ItemTemplate>
-                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetailsl.aspx?id="+Eval("VideoID") %>"><image src="<%# Eval("Pictures") %>"></image></a></div>
+                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></div>
                                                 </ItemTemplate>
                                             </asp:ListView>
                                         </div>
@@ -123,7 +123,7 @@
                                                     </div>
                                                 </GroupTemplate>
                                                 <ItemTemplate>
-                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetailsl.aspx?id="+Eval("VideoID") %>"><image src="<%# Eval("Pictures") %>"></image></a></image></div>
+                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></div>
                                                 </ItemTemplate>
                                             </asp:ListView>
                                         </div>
@@ -140,7 +140,7 @@
                                                     </div>
                                                 </GroupTemplate>
                                                 <ItemTemplate>
-                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetailsl.aspx?id="+Eval("VideoID") %>"><image src="<%# Eval("Pictures") %>"></image></a></image></div>
+                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></div>
                                                 </ItemTemplate>
                                             </asp:ListView>
                                         </div>                               
@@ -166,10 +166,10 @@
                                                 <ItemTemplate>
                                                     <div >
                                                         <div style="width:20%;height:200px;float:left;margin-top:10px">
-                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "Malldetails.aspx?id="+Eval("BooksID") %>"><image src="<%# Eval("images") %>" /></a></p>
+                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></p>
                                                         </div>                    
                                                         <div style="width:80%;height:200px;float:left;padding-top:20px;margin-top:10px">
-                                                            <p><a href="<%#"MallDetails.aspx?id="+Eval("BooksID") %>"><%# Eval("Books_name") %></a></p>
+                                                            <p><a href="<%#"MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a></p>
                                                             <p><h2 style="color:red">¥<%# Eval("Price") %></h2></p>
                                                             <p style="font-size:12px;font-family:'Microsoft YaHei'"><%# Eval("Author") %>/<%# Eval("Release_time") %></p>
                                                             <p style="font-size:15px;font-family:'Microsoft YaHei'"><%# Eval("introduce") %></p><br />
@@ -178,7 +178,7 @@
                                                     </div>
                                                 </ItemTemplate>
                                             </asp:ListView>
-                                            <div style="text-align:center; margin-top:25px;">
+                                            <div style="text-align:center">
                                                 <asp:DataPager runat="server" PagedControlID="LVBooks" PageSize="8" ID="DPBooks" OnPreRender="DPBooks_PreRender">
                                                     <Fields>
                                                         <asp:NextPreviousPagerField ShowFirstPageButton="true" FirstPageText="首页" PreviousPageText="上一页" ShowNextPageButton="false" ButtonCssClass="btn-default btn-sm" />
@@ -198,10 +198,10 @@
                                                 <ItemTemplate>
                                                     <div >
                                                         <div style="width:20%;height:200px;float:left;margin-top:10px">
-                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "Malldetails.aspx?id="+Eval("BooksID") %>"><image src="<%# Eval("images") %>" /></a></p>
+                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></p>
                                                         </div>                    
                                                         <div style="width:80%;height:200px;float:left;padding-top:20px;margin-top:10px">
-                                                            <p><a href="<%#"MallDetails.aspx?id="+Eval("BooksID") %>"><%# Eval("Books_name") %></a></p>
+                                                            <p><a href="<%#"MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a></p>
                                                             <p><h2 style="color:red">¥<%# Eval("Price") %></h2></p>
                                                             <p style="font-size:12px;font-family:'Microsoft YaHei'"><%# Eval("Author") %>/<%# Eval("Release_time") %></p>
                                                             <p style="font-size:15px;font-family:'Microsoft YaHei'"><%# Eval("introduce") %></p><br />
@@ -221,10 +221,10 @@
                                                 <ItemTemplate>
                                                     <div >
                                                         <div style="width:20%;height:200px;float:left;margin-top:10px">
-                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "Malldetails.aspx?id="+Eval("BooksID") %>"><image src="<%# Eval("images") %>" /></a></p>
+                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></p>
                                                         </div>                    
                                                         <div style="width:80%;height:200px;float:left;padding-top:20px;margin-top:10px">
-                                                            <p><a href="<%#"MallDetails.aspx?id="+Eval("BooksID") %>"><%# Eval("Books_name") %></a></p>
+                                                            <p><a href="<%#"MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a></p>
                                                             <p><h2 style="color:red">¥<%# Eval("Price") %></h2></p>
                                                             <p style="font-size:12px;font-family:'Microsoft YaHei'"><%# Eval("Author") %>/<%# Eval("Release_time") %></p>
                                                             <p style="font-size:15px;font-family:'Microsoft YaHei'"><%# Eval("introduce") %></p><br />
@@ -242,12 +242,12 @@
                                                     </div>
                                                 </LayoutTemplate>
                                                 <ItemTemplate>
-                                                    <div >
+                                                    <div>
                                                         <div style="width:20%;height:200px;float:left;margin-top:10px">
-                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "Malldetails.aspx?id="+Eval("BooksID") %>"><image src="<%# Eval("images") %>" /></a></p>
+                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></p>
                                                         </div>                    
                                                         <div style="width:80%;height:200px;float:left;padding-top:20px;margin-top:10px">
-                                                            <p><a href="<%#"MallDetails.aspx?id="+Eval("BooksID") %>"><%# Eval("Books_name") %></a></p>
+                                                            <p><a href="<%#"MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a></p>
                                                             <p><h2 style="color:red">¥<%# Eval("Price") %></h2></p>
                                                             <p style="font-size:12px;font-family:'Microsoft YaHei'"><%# Eval("Author") %>/<%# Eval("Release_time") %></p>
                                                             <p style="font-size:15px;font-family:'Microsoft YaHei'"><%# Eval("introduce") %></p><br />

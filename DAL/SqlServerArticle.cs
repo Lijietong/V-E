@@ -54,5 +54,15 @@ namespace DAL
             string sql = "select top 8 * from Article where Art_grade='高中' order by Art_clicknum desc";
             return DBHelper.GetFillData(sql);
         }
+        public DataTable SelectArticle(int ArtID)
+        {
+            string sql = "select * from Article where ArtID=@ArtID order by Art_clicknum desc";
+            SqlParameter[] sp = new SqlParameter[]
+            {
+                new SqlParameter("@ArtID",ArtID),
+            };
+            return DBHelper.GetFillData(sql, sp);
+
+        }
     }
 }

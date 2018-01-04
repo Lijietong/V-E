@@ -28,7 +28,7 @@ namespace WEB
                 string uid = txtName.Text.Trim();
                 string pwd = txtPassword.Text.Trim();
                 string tel = txtTel.Text.Trim();
-                cmd.CommandText = "insert into UserInfo(UserID,PassWord,Tel) values('" + uid + "','" + pwd + "','" + tel + "')";
+                cmd.CommandText = "insert into UserInfo(UserID,PassWord,UserName,T) values('" + uid + "','" + pwd + "','" + tel + "')";
                 try
                 {
                     cnn.Open();

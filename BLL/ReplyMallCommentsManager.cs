@@ -13,6 +13,17 @@ namespace BLL
     public class ReplyMallCommentsManager
     {
         private static IReplyMallComments ireplymallcomments = DataAccess.CreateReplyMallComments();
-
+        public static DataTable SelectAllReplyMallComments()
+        {
+            return ireplymallcomments.SelectAllReplyMallComments();
+        }
+        public static int InsertReplyMallComments(ReplyMallComments replymallcomments)
+        {
+            return ireplymallcomments.InsertReplyMallComments(replymallcomments);
+        }
+        public static int DeleteReplyMallComments(int ComID)
+        {
+            return ireplymallcomments.DeleteReplyMallComments(ComID);
+        }
     }
 }

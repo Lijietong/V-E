@@ -13,6 +13,10 @@ namespace WEB
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+
+            }
             BindxxCourses();
             BindczCourses();
             BindgzCourses();
@@ -27,6 +31,8 @@ namespace WEB
             BindgzBooks();
             BindTeachers();
         }
+
+        
         private void BindxxCourses()
         {
             DataTable dt = CoursesManager.SelectxxTop3();
@@ -110,7 +116,7 @@ namespace WEB
         }
         private void BindxxBooks()
         {
-            DataTable dt = BooksManager.SelectxxTop6();
+            DataTable dt = GoodsManager.SelectxxBooksTop6();
             if (dt != null && dt.Rows.Count != 0)
             {
                 RPxxpaihang.DataSource = dt;
@@ -119,7 +125,7 @@ namespace WEB
         }
         private void BindczBooks()
         {
-            DataTable dt = BooksManager.SelectczTop6();
+            DataTable dt = GoodsManager.SelectczBooksTop6();
             if (dt != null && dt.Rows.Count != 0)
             {
                 RPczpaihang.DataSource = dt;
@@ -128,7 +134,7 @@ namespace WEB
         }
         private void BindgzBooks()
         {
-            DataTable dt = BooksManager.SelectgzTop6();
+            DataTable dt = GoodsManager.SelectgzBooksTop6();
             if (dt != null && dt.Rows.Count != 0)
             {
                 RPgzpaihang.DataSource = dt;

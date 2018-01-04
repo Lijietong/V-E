@@ -1,0 +1,97 @@
+﻿/*头部*/
+.center{
+    width:100%;
+    height:115px;
+    background-color:#efece7;
+}
+.logo{
+    width:697px;
+    height:100px;
+    margin-left:50px;
+    float:left;
+    background-image:url("../images/Picture/Logo.png");  
+    margin-top:10px; 
+}
+.Logobtn{
+    background-color:#efece7;
+    opacity:0;
+    border:none;
+    width:360px;
+    height:100px;
+    margin-left:70px;
+    cursor:pointer;
+}
+
+/*文章*/
+.main{
+    background-color:#ffffff;
+    margin:0 15%;    
+}
+.ArtContent{
+    margin:0 7%;
+}
+.rol{
+    text-align:center;
+}
+.rol li{
+    float:left;
+    /*display:block;*/
+}
+.first-main{
+    text-align:center;
+}
+
+
+/*底部*/
+.footer{
+    height:250px;
+    text-align:center;
+    line-height:30px;
+    font-family:'Microsoft YaHei';
+}
+.footer_top{
+    height:35px;
+}
+.footer_left{
+    width:10%;
+    margin-left:12.5%;
+    height:150px;
+    float:left;
+}
+.footer_center{
+    width:10%;
+    margin-left:22.5%;
+    height:150px;
+    float:left;
+}
+.footer_right{
+    width:10%;
+    margin-left:22.5%;
+    height:150px;
+    float:left;
+}
+.footer_bottom{
+    height:200px;
+    padding-top:10px;
+    font-size:14px;
+}
+ul,li,a{
+    text-decoration:none;
+    list-style:none;
+}
+a:hover{
+    cursor:pointer;
+    color:darkseagreen;
+}
+.clear{clear:both}
+
+
+/*修改*/
+*{
+    margin:0;
+    padding:0;
+    border:0
+}
+body{
+    background-color:#efece7;
+}

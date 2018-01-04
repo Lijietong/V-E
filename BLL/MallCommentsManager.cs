@@ -17,5 +17,13 @@ namespace BLL
         {
             return imallcomments.InsertMallComments(mallcomments);
         }
+        public static DataTable SelectAllMallComments()
+        {
+            return imallcomments.SelectAllComments();
+        }
+        public static int DeleteMallComments(int ComID)
+        {
+            return imallcomments.DeleteMallComments(ComID);
+        }
     }
 }

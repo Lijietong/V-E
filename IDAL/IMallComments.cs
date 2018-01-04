@@ -11,9 +11,8 @@ namespace IDAL
 {
     public interface IMallComments
     {
-        //DataTable SelectComments(int ActID);
         int InsertMallComments(MallComments mallcomments);
-        //DataTable SelectAllComments();
-        //int DeleteComments(int ComID);
+        DataTable SelectAllComments();
+        int DeleteMallComments(int ComID);
     }
 }
