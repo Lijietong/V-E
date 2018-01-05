@@ -79,7 +79,7 @@
                                                     </div>
                                                 </GroupTemplate>
                                                 <ItemTemplate>
-                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></div>                                                  
+                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><image src="<%# Eval("Picture") %>"></image></a></div>                                                  
                                                 </ItemTemplate>
                                             </asp:ListView>     
                                             <div class="clear"></div>  
@@ -106,7 +106,7 @@
                                                     </div>
                                                 </GroupTemplate>
                                                 <ItemTemplate>
-                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></div>
+                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><image src="<%# Eval("Picture") %>"></image></a></div>
                                                 </ItemTemplate>
                                             </asp:ListView>
                                         </div>
@@ -123,7 +123,7 @@
                                                     </div>
                                                 </GroupTemplate>
                                                 <ItemTemplate>
-                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></div>
+                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><image src="<%# Eval("Picture") %>"></image></a></div>
                                                 </ItemTemplate>
                                             </asp:ListView>
                                         </div>
@@ -140,7 +140,7 @@
                                                     </div>
                                                 </GroupTemplate>
                                                 <ItemTemplate>
-                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></div>
+                                                    <div style="padding:5px;width:290px;height:165px;float:left;margin-left:2.5%;margin-top:10px"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><image src="<%# Eval("Picture") %>"></image></a></div>
                                                 </ItemTemplate>
                                             </asp:ListView>
                                         </div>                               
@@ -166,7 +166,7 @@
                                                 <ItemTemplate>
                                                     <div >
                                                         <div style="width:20%;height:200px;float:left;margin-top:10px">
-                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></p>
+                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><image src="<%# Eval("Picture") %>"></image></a></p>
                                                         </div>                    
                                                         <div style="width:80%;height:200px;float:left;padding-top:20px;margin-top:10px">
                                                             <p><a href="<%#"MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a></p>
@@ -198,7 +198,7 @@
                                                 <ItemTemplate>
                                                     <div >
                                                         <div style="width:20%;height:200px;float:left;margin-top:10px">
-                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></p>
+                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><image src="<%# Eval("Picture") %>"></image></a></p>
                                                         </div>                    
                                                         <div style="width:80%;height:200px;float:left;padding-top:20px;margin-top:10px">
                                                             <p><a href="<%#"MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a></p>
@@ -221,7 +221,7 @@
                                                 <ItemTemplate>
                                                     <div >
                                                         <div style="width:20%;height:200px;float:left;margin-top:10px">
-                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></p>
+                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><image src="<%# Eval("Picture") %>"></image></a></p>
                                                         </div>                    
                                                         <div style="width:80%;height:200px;float:left;padding-top:20px;margin-top:10px">
                                                             <p><a href="<%#"MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a></p>
@@ -244,7 +244,7 @@
                                                 <ItemTemplate>
                                                     <div>
                                                         <div style="width:20%;height:200px;float:left;margin-top:10px">
-                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><image src="<%# Eval("Picture") %>"></image></a></p>
+                                                            <p style="padding:10px 7px 4px 5px;height:195px;width:145px;"><a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><image src="<%# Eval("Picture") %>"></image></a></p>
                                                         </div>                    
                                                         <div style="width:80%;height:200px;float:left;padding-top:20px;margin-top:10px">
                                                             <p><a href="<%#"MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a></p>
@@ -264,7 +264,7 @@
                     </asp:updatepanel>
         <script src="JS/bootstrap.min.js"></script>
         <br /><br />
-        <hr  style="background-image:url(../images/mall/圣诞3.jpg);height:3px;width:70%;margin-left:15%;"/> 
+        <div  style="background-image:url(../images/mall/圣诞3.jpg);height:3px;width:70%;margin-left:15%;margin-top:20px; "></div> 
         <!--底部-->
         <div class="footer">
             <div class="footer_top"></div>

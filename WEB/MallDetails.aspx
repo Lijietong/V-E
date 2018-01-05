@@ -69,7 +69,7 @@
                                             <div class="clear"></div>
                                     </div>
                                     <div style="text-align:center">
-                                            <asp:Button runat="server" ID="BtnAdd" CssClass="BtnAdd" Text="加入购物车" OnClick="BtnAdd_Click"/>
+                                            <asp:Button runat="server" ID="AddShoppingCart" CssClass="BtnAdd" Text="加入购物车" CommandName="AddShoppingCart"/>
                                     </div>
                                   </div>
                               </div>
@@ -83,7 +83,7 @@
         <br /><br />
         <div class="details">&nbsp;&nbsp;
             <div style="height:40px;width:10px;background-color:forestgreen;float:left;"></div>
-            <div style="height:40px;width:150px;float:left;padding-top:3px">&nbsp;&nbsp;商&nbsp;品&nbsp;简&nbsp;介&nbsp;及&nbsp;评&nbsp;论</div>
+            <div style="height:40px;width:150px;float:left;padding-top:3px">&nbsp;&nbsp;商&nbsp;品&nbsp;详&nbsp;情&nbsp;及&nbsp;评&nbsp;论</div>
         </div><br /><br />
         <!-- 商品简介及评论 -->
         <hr  style="background-image:url(../images/mall/圣诞3.jpg);height:3px;width:70%;margin-left:15%;"/> 
@@ -106,24 +106,95 @@
                 </div>
                 <!-- 商品评论 -->
                 <div class="tab-pane fade" id="B">
-                    <asp:ListView runat="server" ID="LVComments">
-                        <LayoutTemplate>
-                            <asp:PlaceHolder runat="server" ID="itemplaceholder"></asp:PlaceHolder>
-                        </LayoutTemplate>
-                        <ItemTemplate>
-                            <div class="Box">
-                                <div class="Box_left">
-                                    <div class="Box_left_top"><%# Eval("Photo") %></div>
-                                    <div class="Box_left_bottom"><%# Eval("UserName") %></div>
-                                </div>
-                                <div class="Box_right"><%# Eval("MallComments") %></div>
-                            </div>
-                        </ItemTemplate>
-                    </asp:ListView>
+                            <!-- 评论框 -->
+                            <asp:UpdatePanel ID="UpP002" runat="server">
+                                <ContentTemplate>
+                                    <asp:Panel ID="PingLunBox" runat="server">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div id="colorbolck01" style="width: 100%; height: 15px;"></div>
+                                                <asp:TextBox ID="txtComments" CssClass="commentsstyle"  Width="80%" Margin-left="10%" Height="100px" runat="server" TextMode="MultiLine" placeholder="说点什么吧..."></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-8 text-center">
+                                                <div id="colorbolck02" style="width: 100%; height: 15px;"></div>
+                                                <asp:RequiredFieldValidator ID="ReFV1" runat="server" ForeColor="Red" Font-Bold="true" Font-Size="16px" ErrorMessage="评论内容不能为空" Display="Dynamic" ControlToValidate="txtComments" ValidationGroup="comments"></asp:RequiredFieldValidator>
+                                                <asp:RegularExpressionValidator ID="ReEV1" runat="server" ForeColor="Red" Font-Bold="true" Font-Size="16px" ErrorMessage="字数不能超过140字" Display="Dynamic" ControlToValidate="txtComments" ValidationGroup="comments" ValidationExpression="^[\s\S]{1,140}$"></asp:RegularExpressionValidator>
+                                            </div>
+                                            <div class="col-md-4 text-center">
+                                                <div id="colorbolck03" style="width: 100%; height: 15px;"></div>
+                                                <asp:Button ID="btnComments" CssClass="btncomments" runat="server" Text=" 发 表 评 论 " ValidationGroup="comments" OnClick="btnComments_Click" />
+                                                <div id="colorbolck04" style="width: 100%; height: 15px;"></div>
+                                            </div>
+                                        </div>
+                                    </asp:Panel>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                            <asp:UpdatePanel ID="UpP003" runat="server">
+                                <ContentTemplate>
+                                    <!-- 评论回复绑定 -->
+                                    <asp:ListView ID="LVMallComment" runat="server" OnItemDataBound="LVMallComment_ItemDataBound">
+                                        <LayoutTemplate>
+                                            <asp:PlaceHolder runat="server" ID="itemPlaceholder"></asp:PlaceHolder>
+                                        </LayoutTemplate>
+                                        <ItemTemplate>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <hr />
+                                                    <!-- 评论 -->
+                                                    <div class="row">
+                                                        <div class="col-md-11 col-md-offset-1">
+                                                            <span><a href="#" style="font-size: 16px;"><%#Eval("UserName") %></a>：<%#Eval("Comments_contents")%></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-10 text-right">
+                                                            <i style="font-size: 12px; height: 5px;"><%#Eval("Comments_time") %></i>
+                                                        </div>
+                                                        <div class="col-md-2 text-center">
+                                                            <div class="reply_comment">
+                                                                <asp:LinkButton ID="lbtnReply" runat="server" OnClick="lbtnReply_Click">回复本层</asp:LinkButton>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-8 col-md-offset-3">
+                                                            <asp:Panel ID="PanelReply" runat="server" Visible="false">
+                                                                <div class="reply_textbox">
+                                                                    <asp:HiddenField ID="HiddenFieldComID" runat="server" Value='<%#Eval("MallCommentsID") %>' Visible="false" />
+                                                                    <asp:TextBox ID="txtReplyContent" Width="100%" CssClass="txtReply" TextMode="MultiLine" runat="server"></asp:TextBox>
+                                                                    <asp:Button ID="btnRply" runat="server" Text="发表" OnClick="btnRply_Click" CssClass="btnReply btn btn-default btn-sm" ValidationGroup="reply_comments" />
+                                                                </div>
+                                                                <div style="margin-left: 30%;">
+                                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red" Font-Bold="true" Font-Size="14px" runat="server" ErrorMessage="回复内容不能为空" Display="Dynamic" ControlToValidate="txtReplyContent" ValidationGroup="reply_comments"></asp:RequiredFieldValidator>
+                                                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ForeColor="Red" Font-Bold="true" Font-Size="14px" ErrorMessage="字数不能超过140字" Display="Dynamic" ControlToValidate="txtReplyContent" ValidationExpression="^[\s\S]{1,140}$" ValidationGroup="reply_comments"></asp:RegularExpressionValidator>
+                                                                </div>
+                                                            </asp:Panel>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 回复 -->
+                                                    <div class="row">
+                                                        <asp:Repeater ID="RepeaterReplyComments" runat="server">
+                                                            <ItemTemplate>
+                                                                <div class="row">
+                                                                    <div class="col-md-8 col-md-offset-3">
+                                                                        <span><a href="#"><%#Eval("回复人")%></a>回复说 ：<%#Eval("ReplyContents") %><i style="font-size: 10px; margin-left: 20px;"><%#Eval("ReplyTime") %></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </ItemTemplate>
+                                                        </asp:Repeater>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:ListView>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
                 </div>
             </div>
         <script src="JS/bootstrap.min.js"></script>
-        <hr  style="height:5px;background-color:#fff;"/>
+        <div style="height:5px;background-color:#fff;margin-left:10%;width:80%;margin-top:20px;"></div>
         <!--底部-->    
         <div class="footer">
             <div class="footer_top"></div>

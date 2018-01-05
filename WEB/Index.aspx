@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/activities.css" />
     <script src="JS/jquery-1.11.3.min.js"></script>
     <script src="JS/wySilder.min.js"></script>
     <script src="JS/lunbotu.js"></script>
@@ -34,7 +35,7 @@
                         <table style="padding:20px">
                             <tr >
                                 <td >                  
-                                   <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("Picture") %>' /></a>                  
+                                   <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("Picture") %>' /></a>                  
                                 </td>
                             </tr>
                            <tr>
@@ -57,7 +58,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                               <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a>
+                               <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><%# Eval("GoodsName") %></a>
                             </td>
                         </tr>                              
                     </table>
@@ -74,7 +75,7 @@
                         <table style="padding:20px;">
                             <tr >
                                 <td >                  
-                                   <a href="#"><asp:Image ID="Act_images" runat="server" Width="300px" Height="115px" ImageUrl='<%#Eval("Act_images") %>' /></a>                 
+                                   <a href="ActivitiesDetails.aspx" target="_blank"><asp:Image ID="Act_images" runat="server" Width="300px" Height="115px" ImageUrl='<%#Eval("Act_images") %>' /></a>                 
                                 </td>
                             </tr>          
                         </table>
@@ -90,7 +91,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                               <a href="Article.aspx?id=<%# Eval("ArtID") %>"><%# Eval("Art_theme") %></a>
+                               <a href="Article.aspx?id=<%# Eval("ArtID") %>" target="_blank"><%# Eval("Art_theme") %></a>
                             </td>
                         </tr>                              
                     </table>
@@ -115,7 +116,7 @@
                         <table style="padding:20px">
                             <tr >
                                 <td >                  
-                                   <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("Picture") %>'  /></a>                  
+                                   <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"  target="_blank"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("Picture") %>'  /></a>                  
                                 </td>
                             </tr>
                            <tr>
@@ -138,7 +139,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a>
+                                <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><%# Eval("GoodsName") %></a>
                             </td>
                         </tr>                              
                     </table>
@@ -156,7 +157,7 @@
                         <table style="padding:20px;">
                             <tr >
                                 <td >                  
-                                   <a href="#"><asp:Image ID="Act_images" runat="server" Width="300px" Height="115px" ImageUrl='<%#Eval("Act_images") %>' /></a>                 
+                                   <a href="ActivitiesDetails.aspx" target="_blank"><asp:Image ID="Act_images" runat="server" Width="300px" Height="115px" ImageUrl='<%#Eval("Act_images") %>' /></a>                 
                                 </td>
                             </tr>          
                         </table>
@@ -172,7 +173,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="Article.aspx?id=<%# Eval("ArtID") %>"><%# Eval("Art_theme") %></a>
+                                <a href="Article.aspx?id=<%# Eval("ArtID") %>" target="_blank"><%# Eval("Art_theme") %></a>
                             </td>
                         </tr>                              
                     </table>
@@ -197,7 +198,7 @@
                         <table style="padding:20px">
                             <tr >
                                 <td >                  
-                                   <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("Picture") %>'  /></a>                  
+                                   <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><asp:Image ID="course_picture" runat="server" Width="190px" Height="130px" ImageUrl='<%#Eval("Picture") %>'  /></a>                  
                                 </td>
                             </tr>
                            <tr>
@@ -220,7 +221,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>"><%# Eval("GoodsName") %></a>
+                                <a href="<%# "MallDetails.aspx?id="+Eval("GoodsID") %>" target="_blank"><%# Eval("GoodsName") %></a>
                             </td>
                         </tr>                              
                     </table>
@@ -238,7 +239,7 @@
                         <table style="padding:20px;">
                             <tr >
                                 <td >                  
-                                   <a href="#"><asp:Image ID="Act_images" runat="server" Width="300px" Height="115px" ImageUrl='<%#Eval("Act_images") %>' /></a>                 
+                                   <a href="ActivitiesDetails.aspx" target="_blank"><asp:Image ID="Act_images" runat="server" Width="300px" Height="115px" ImageUrl='<%#Eval("Act_images") %>' /></a>                 
                                 </td>
                             </tr>          
                         </table>
@@ -254,7 +255,7 @@
                       <table style="width:330px">
                         <tr >
                             <td  style="text-align:left;font-size:14px;line-height:30px;">
-                                <a href="Article.aspx?id=<%# Eval("ArtID") %>"><%# Eval("Art_theme") %></a>
+                                <a href="Article.aspx?id=<%# Eval("ArtID") %>" target="_blank"><%# Eval("Art_theme") %></a>
                             </td>
                         </tr>                              
                     </table>

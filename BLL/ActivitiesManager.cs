@@ -8,6 +8,7 @@ using IDAL;
 using DALFactory;
 using Models;
 
+
 namespace BLL
 {
     public class ActivitiesManager
@@ -17,9 +18,9 @@ namespace BLL
         {
             return iactivities.InsertActivity(activities);
         }
-        public static int DeleteActivity(int ActID)
+        public static int DeleteActivity(int Act_id)
         {
-            return iactivities.DeleteActivity(ActID);
+            return iactivities.DeleteActivity(Act_id);
         }
         public static DataTable SelectxxTop4()
         {
@@ -33,6 +34,13 @@ namespace BLL
         {
             return iactivities.SelectgzTop4();
         }
-
+        public static DataTable SelectactTop8()
+        {
+            return iactivities.SelectactTop8();
+        }
+        public static DataTable SelectActID(int ActID)
+        {
+            return iactivities.SelectActID(ActID);
+        }
     }
 }

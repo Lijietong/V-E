@@ -58,7 +58,7 @@
                         <li>友情链接</li>
                         <li><a href="http://www.jxnu.edu.cn" target="_blank">江西师范大学</a></li>
                         <li><a href="http://www.jxedu.gov.cn/" target="_blank">江西教育网</a></li>
-                        <li><a href="http://gaojiao.jxedu.gov.cn/" target="_blank">江西高等教育网</a></li>
+                        <li><a href="http://gaojiao.jxedu.gov.cn/" target="_blank">江西高教网</a></li>
                     </ul>
                 </div>
                 <div class="footer_center">

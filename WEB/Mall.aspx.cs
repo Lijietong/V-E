@@ -20,8 +20,7 @@ namespace WEB
             BindAllBooks();
             BindxxBooks();
             BindczBooks();
-            BindgzBooks();        
-               
+            BindgzBooks();                
         }
         public void BindAllVideo()
         {

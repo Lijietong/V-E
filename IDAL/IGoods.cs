@@ -28,8 +28,8 @@ namespace IDAL
         DataTable SelectAllTot_amt(string UserName);
         int UpdateShoppingCartNum(int CartID, int num, float total);
         DataTable JudgeShoppingCart(int UserID);
-        DataTable JudgeMallYorN(int UserID, int VideoID);//判断某用户购物车是否有某商品的方法
-        int UpdateShoppingCart(int UserID, int VideoID, int Qty, float Tot_amt);//购物车有商品时做更新操作
+        DataTable JudgeMallYorN(int UserID, int GoodsID);//判断某用户购物车是否有某商品的方法
+        int UpdateShoppingCart(int UserID, int GoodsID, int Qty, float Tot_amt);//购物车有商品时做更新操作
         int InsertOrder(int UserID); //从购物车表插入订单表
         DataTable SelectOrders(int UserID); //从订单表查询某用户的订单信息
         DataTable SelectOrdersIn(int Order_no); //从订单表查询某订单的订单信息
@@ -37,7 +37,7 @@ namespace IDAL
         int InsertMallComments(MallComments MallComments); //向商品评论表插入评论
         int InsertReplyMallComments(ReplyMallComments ReplyMallComments); //向商品回复表插入回复
         DataTable SelectMallComments(int GoodsID); //查询商品评论
-        DataTable SelectReplyMallComments(int MallCommentID); //查询商品回复
+        DataTable SelectReplyMallComments(int MallCommentsID); //查询商品回复
         DataTable JudgeYorNComments(int UserID, int GoodsID); //判断用户能否对此商品评论
         DataTable SelectUserMallCart(int UserID); //查询用户购物车数量
     }

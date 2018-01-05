@@ -14,8 +14,10 @@ namespace IDAL
         DataTable SelectxxTop4();
         DataTable SelectczTop4();
         DataTable SelectgzTop4();
+        DataTable SelectactTop8();
+        DataTable SelectActID(int ActID);
         int InsertActivity(Activities activities);
         int DeleteActivity(int Act_id);
-       
+
     }
 }

@@ -11,6 +11,7 @@ namespace Models
         public int ActID { get; set; }
         public string Act_theme { get; set; }
         public string Act_content { get; set; }
+        public string Act_summary { get; set; }
         public DateTime Act_time { get; set; }
         public string Act_address { get; set; }
         public int SpoID { get; set; }

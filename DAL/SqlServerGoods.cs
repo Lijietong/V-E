@@ -98,12 +98,12 @@ namespace DAL
         }
         public int InsertShoppingCart(MallItemcart MallItemcart)
         {
-            string sql = "insert into MallItemCart(UserID,GoodsID,UnitPrice,Number,TotalAmount)values(@UserID,@GoodsID,@UnitPrice,@Number,@TotalAmount)";
+            string sql = "insert into MallItemCart(UserID,GoodsID,Unit_price,Qty,Tot_amt)values(@UserID,@GoodsID,@Unit_price,@Qty,@Tot_amt)";
             SqlParameter[] para =
             {
                 new SqlParameter ("@UserID",MallItemcart.UserID),
                 new SqlParameter ("@GoodsID",MallItemcart.GoodsID),
-                new SqlParameter ("@UnitPrice",MallItemcart.Unit_price),
+                new SqlParameter ("@Unit_price",MallItemcart.Unit_price),
                 new SqlParameter ("@Number",MallItemcart.Qty),
                 new SqlParameter ("@TotalAmount",MallItemcart.Tot_amt)
             };
@@ -120,7 +120,7 @@ namespace DAL
         }
         public DataTable SelectAllTot_amt(string UserName)
         {
-            string sql = "select SUM(TotalAmount) FinalTotalAmount from Users,MallItemCart,Goods where MallItemCart.UserID=Users.UserID and MallItemCart.GoodsID=Goods.GoodsID and Users.UserName='" + @UserName + "'";
+            string sql = "select SUM(Tot_amt) FinalTot_amt from Users,MallItemCart,Goods where MallItemCart.UserID=Users.UserID and MallItemCart.GoodsID=Goods.GoodsID and Users.UserName='" + @UserName + "'";
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("@UserName",UserName)
@@ -128,12 +128,12 @@ namespace DAL
             DataTable dt = DBHelper.GetFillData(sql, sp);
             return dt;
         }
-        public int UpdateShoppingCartNum(int CartID, int num, float total)
+        public int UpdateShoppingCartNum(int CartID, int qty, float total)
         {
-            string sql = "update MallItemCart set Number = '" + @num + "',TotalAmount='" + @total + "' where ShoppingCartID = '" + @CartID + "' ";
+            string sql = "update MallItemCart set Qty = '" + @qty + "',Tot_amt='" + @total + "' where ShoppingCartID = '" + @CartID + "' ";
             SqlParameter[] para =
             {
-                new SqlParameter("@num",num),
+                new SqlParameter("@qty",qty),
                 new SqlParameter("@total",total),
                 new SqlParameter("@CartID",CartID)
             };
@@ -160,13 +160,13 @@ namespace DAL
             DataTable dt = DBHelper.GetFillData(sql, sp);
             return dt;
         }
-        public int UpdateShoppingCart(int UserID, int GoodsID, int Number, float TotalAmount) //购物车有商品时做更新操作
+        public int UpdateShoppingCart(int UserID, int GoodsID, int Qty, float Tot_amt) //购物车有商品时做更新操作
         {
-            string sql = "update MallItemCart set Qty=Qty+'" + @Number + "',TotalAmount=TotalAmount+'" + @TotalAmount + "' where UserID='" + @UserID + "' and GoodsID='" + @GoodsID + "'";
+            string sql = "update MallItemCart set Qty=Qty+'" + @Qty + "',Tot_amt=Tot_amt+'" + @Tot_amt + "' where UserID='" + @UserID + "' and GoodsID='" + @GoodsID + "'";
             SqlParameter[] para =
             {
-                new SqlParameter("@Number",Number),
-                new SqlParameter("@TotalAmount",TotalAmount),
+                new SqlParameter("@Qty",Qty),
+                new SqlParameter("@Tot_amt",Tot_amt),
                 new SqlParameter("@UserID",UserID),
                 new SqlParameter("@GoodsID",GoodsID)
             };
@@ -190,22 +190,22 @@ namespace DAL
             DataTable dt = DBHelper.GetFillData(sql, sp);
             return dt;
         }
-        public DataTable SelectOrdersIn(int OrderID) //从订单表查询某订单的订单信息
+        public DataTable SelectOrdersIn(int Order_no) //从订单表查询某订单的订单信息
         {
-            string sql = "select * from Orders where OrderID='" + @OrderID + "'";
+            string sql = "select * from Orders where Order_no='" + @Order_no + "'";
             SqlParameter[] sp = new SqlParameter[]
             {
-                new SqlParameter("@OrderID",OrderID)
+                new SqlParameter("@Order_no",Order_no)
             };
             DataTable dt = DBHelper.GetFillData(sql, sp);
             return dt;
         }
-        public DataTable SelectOrderItems(int OrderID) //从订单详细表查询订单详细信息
+        public DataTable SelectOrderItems(int Order_no) //从订单详细表查询订单详细信息
         {
-            string sql = "select * from OrderItems,Goods where OrderID='" + @OrderID + "'and OrderItems.GoodsID=Goods.GoodsID";
+            string sql = "select * from OrderItems,Goods where Order_no='" + @Order_no+ "'and OrderItems.GoodsID=Goods.GoodsID";
             SqlParameter[] sp = new SqlParameter[]
             {
-                new SqlParameter("@OrderID",OrderID)
+                new SqlParameter("@OrderID",Order_no)
             };
             DataTable dt = DBHelper.GetFillData(sql, sp);
             return dt;
@@ -259,7 +259,7 @@ namespace DAL
         }
         public DataTable JudgeYorNComments(int UserID, int GoodsID) //判断用户能否对此商品评论
         {
-            string sql = "select * from Orders, OrderItems where Orders.OrderID = OrderItems.OrderID and OrderItems.GoodsID = '" + @GoodsID + "'and Orders.UserID = '" + @UserID + "'";
+            string sql = "select * from Orders, OrderItems where Orders.Order_no = OrderItems.Order_no and OrderItems.GoodsID = '" + @GoodsID + "'and Orders.UserID = '" + @UserID + "'";
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("@GoodsID",GoodsID),

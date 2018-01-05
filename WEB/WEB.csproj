@@ -63,9 +63,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ActivitiesDetails.aspx" />
     <Content Include="Article.aspx" />
     <Content Include="bin\WEB.dll" />
     <Content Include="bin\WEB.pdb" />
+    <Content Include="CSS\activities.css" />
     <Content Include="CSS\Article.css" />
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\index.css" />
@@ -510,6 +512,13 @@
     <Content Include="Register.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivitiesDetails.aspx.cs">
+      <DependentUpon>ActivitiesDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivitiesDetails.aspx.designer.cs">
+      <DependentUpon>ActivitiesDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Article.aspx.cs">
       <DependentUpon>Article.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
