@@ -16,19 +16,61 @@
         <div class="header">
             <div class="header_l"><a href="Index.aspx"><asp:Image ID="Logo" runat="server"  ImageUrl="~/images/Picture/Logo.png" CssClass="logo"/></a></div>
             <div class="header_r">
-                <div class="mall"><asp:LinkButton ID="lbmall" runat="server">商城首页</asp:LinkButton></div>
+                <div class="mall"><asp:LinkButton ID="lbmall" runat="server" OnClick="lbmall_Click">商城首页</asp:LinkButton></div>
                 <div class="function"><asp:LinkButton ID="lbfunction" runat="server">我的功能</asp:LinkButton></div>
-                
+                <div class="LorR">
+                    <asp:Panel runat="server" ID="HadLogin">
+                        <label runat="server" id="lbusername" text="" />&nbsp;&nbsp;
+                        <asp:Linkbutton runat="server" ID="lbtnregister" OnClick="lbtnregister_Click">注销</asp:Linkbutton>
+                    </asp:Panel>
+                    <asp:Panel runat="server" ID="NotLogin">
+                        <a href="Login.aspx">登录</a>&nbsp;|
+                        <a href="Register.aspx">注册</a>
+                    </asp:Panel>
+                </div>      
                 <div class="shopcar">
-                    <asp:Button ID="btnshoucar" runat="server" CssClass="btnshopcar" Text="   购 物 车"/>
+                    <asp:Button ID="btnshoucar" runat="server" CssClass="btnshopcar" Text="购 物 车"/>
+                    <span class="badge"><%=BindUserMallCart() %></span>
                 </div>
             </div>
         </div>   
         <div class="clear"></div> <br /><br />
         <hr style="height:3px;background-color:#fff;"/> 
         <br /> 
-        <!--订单部-->  
-        <div class="order"></div>
+         <!-- 订单 -->
+        <asp:Panel runat="server" ID="Panel01">
+            <div class="order">
+            <asp:Listview runat="server" ID="LVShoppingcart" OnItemCommand="LVShoppingcart_ItemCommand">
+                <LayoutTemplate>
+                    <asp:PlaceHolder runat="server" ID="itemplaceholder"></asp:PlaceHolder>
+                </LayoutTemplate>
+                <ItemTemplate>
+                    <div class="Box">
+                        <div class="Box_left">
+                            <div class="Box_left_top"><image src="<%# Eval("Picture") %>"></image></div>
+                            <div class="Box_left_bottom"><%# Eval("GoodsName") %></div>
+                        </div>
+                        <div class="Box_right">
+                            <span><asp:Label ID="lbshoppingcartid" runat="server" Visible="false" Text='<%#Eval("ShoppingCartID")%>' /></span>
+                            <span>单价：<%# Eval("Price") %></span>&nbsp;
+                            <span>数量：<%# Eval("Qty") %></span>&nbsp;
+                            <span>总额<%# Eval("Tot_amt") %></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span style="margin-left:30px"><asp:LinkButton runat="server" ID="LBClose" CommandName="Delete">删除</asp:LinkButton></span>
+                        </div>                      
+                    </div>
+                </ItemTemplate>
+            </asp:Listview>
+                <div class="clear"></div>
+            <asp:Repeater runat="server" ID="RPBuy" OnItemCommand="RPBuy_ItemCommand">
+                   <ItemTemplate>
+                       <div style="padding-left:850px;">总计金额：<label runat="server" id="lbfinaltot_amt"><%# Eval("FinalTot_amt") %></label>&nbsp&nbsp&nbsp<asp:LinkButton ID="BuyRightNow" runat="server" Class="btn btn-danger" CommandName="BuyRightNow">立即购买</asp:LinkButton></h3></div>
+                   </ItemTemplate>
+            </asp:Repeater>
+        </div>
+        </asp:Panel>
+        <asp:Panel runat="server" ID="Panel02">
+            <div class="image"><img src="images/mall/nothing.png" /></div>
+        </asp:Panel>
         <!--底部--> 
         <br />
         <hr style="height:3px;background-color:#fff" /> 

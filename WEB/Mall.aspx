@@ -21,10 +21,20 @@
             <div class="header_l"><a href="Index.aspx"><asp:Image ID="Logo" runat="server"  ImageUrl="~/images/Picture/Logo.png" CssClass="logo"/></a></div>
             <div class="header_r">
                 <div class="mall"><asp:LinkButton ID="lbmall" runat="server">商城首页</asp:LinkButton></div>
-                <div class="function"><asp:LinkButton ID="lbfunction" runat="server">我的功能</asp:LinkButton></div>              
+                <div class="function"><asp:LinkButton ID="lbfunction" runat="server">我的功能</asp:LinkButton></div>     
+                <div class="LorR">
+                    <asp:Panel runat="server" ID="HadLogin">
+                        <label runat="server" id="lbusername" text="" />&nbsp;&nbsp;
+                        <asp:Linkbutton runat="server" ID="lbtnregister" OnClick="lbtnregister_Click">注销</asp:Linkbutton>
+                    </asp:Panel>
+                    <asp:Panel runat="server" ID="NotLogin">
+                        <a href="Login.aspx">登录</a>&nbsp;|
+                        <a href="Register.aspx">注册</a>
+                    </asp:Panel>
+                </div>         
                 <div class="shopcar">
-                    <asp:Button ID="btnshoucar" runat="server" CssClass="btnshopcar" Text="购 物 车"/>
-                    <span class="badge">0</span>
+                    <asp:Button ID="btnshoucar" runat="server" CssClass="btnshopcar" Text="购 物 车" OnClick="btnshoucar_Click"/>
+                    <span class="badge"><%=BindUserMallCart() %></span>
                 </div>
             </div>
         </div>   

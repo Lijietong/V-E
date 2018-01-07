@@ -19,5 +19,6 @@ namespace Models
         public int Sale_name { get; set; }
         public int Rest_num { get; set; }
         public DateTime Release_time { get; set; }
+        public string MoreDetails { get; set; }
     }
 }

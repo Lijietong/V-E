@@ -22,12 +22,27 @@ namespace WEB
             if(!IsPostBack)
             {
                 ViewState["GoodsID"] = Convert.ToInt32(Request.QueryString["id"]);
-                
+                if (Session["UserName"] != null)
+                {
+                    HadLogin.Visible = true;
+                    NotLogin.Visible = false;
+                    lbusername.InnerText = "欢迎您，" + Session["UserName"].ToString();
+                }
+                else
+                {
+                    NotLogin.Visible = true;
+                    HadLogin.Visible = false;
+                }
             }
             BindGoodsDetails();
           
         }
-        
+        protected void lbtnregister_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("Index.aspx");
+        }
+
         public void BindGoodsDetails()
         {
             int ID = Convert.ToInt32(ViewState["GoodsID"]);
@@ -163,61 +178,6 @@ namespace WEB
                                                
                     }
                     break;
-                case "AddShoppingCart":
-                    {
-                        if(num>0)
-                        if (Session["UserName"] != null)//判断用户是否登录
-                        {
-                            int Qty = Convert.ToInt32(ViewState["ShoppingCartNumber"]);
-                            decimal Unit_price = Convert.ToDecimal(ViewState["Unit_price"]);
-                            if (Qty > 0) //判断购买商品数量是否>1
-                            {
-                                int UserID = Convert.ToInt32(Session["UserID"]);
-                                int GoodsID = Convert.ToInt32(ViewState["GoodsID"]);
-                                DataTable goods = GoodsManager.JudgeMallYorN(UserID, GoodsID);
-                                if (goods != null && goods.Rows.Count != 0) //判断购物车是否被创建
-                                {
-                                    //若购物车已经创建 里面有商品 则更新购物车
-                                    Decimal Tot_amt = (Convert.ToDecimal(ViewState["Unit_price"])) * (Convert.ToInt32(ViewState["ShoppingCartNumber"]));
-                                    float tot_amt = (float.Parse(((Label)e.Item.FindControl("RTprice")).Text)) * (Convert.ToInt32(ViewState["ShoppingCartNumber"]));
-                                    int Result = GoodsManager.UpdateShoppingCart(UserID, GoodsID, Qty, tot_amt);
-                                    if (Result >= 1)
-                                    {
-                                        Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('加入购物车成功！');</script>");
-                                        BindUserMallCart();
-                                    }
-                                }
-                                else //若没有 则新建购物车
-                                {
-                                    MallItemcart mallitemcart = new MallItemcart();
-                                    mallitemcart.UserID = Convert.ToInt32(Session["UserID"]);
-                                    mallitemcart.GoodsID = Convert.ToInt32(ViewState["GoodsID"]);
-                                    mallitemcart.Unit_price = float.Parse(((Label)e.Item.FindControl("RTprice")).Text);
-                                    mallitemcart.Qty = Convert.ToInt32(ViewState["ShoppingCartNumber"]);
-                                    mallitemcart.Tot_amt = (float.Parse(((Label)e.Item.FindControl("RTprice")).Text)) * (Convert.ToInt32(ViewState["ShoppingCartNumber"]));
-                                    int result = GoodsManager.InsertShoppingCart(mallitemcart);
-                                    if (result >= 1)
-                                    {
-                                        Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('加入购物车成功！');</script>");
-                                        BindUserMallCart();
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('请确定购买数量');</script>");
-                            }
-                        }
-                        else
-                        {
-                            Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('请先登录');</script>");
-                        }
-                    else
-                        {
-                            Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('已经卖光了。。。');</script>");
-                        }
-                    }
-                    break;
             }
         }
 
@@ -261,5 +221,71 @@ namespace WEB
                 ScriptManager.RegisterClientScriptBlock(UpP002, this.GetType(), "click", "alert('请先登录')", true);
             }
         }
-    }
+
+        protected void btnshoucar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("shoppingcar.aspx");
+        }
+
+        protected void AddShoppingCart_Click(object sender, EventArgs e)
+        {
+            int num = int.Parse(ViewState["Rest_num"].ToString());
+            if (num > 0)
+            {
+                if (Session["UserName"] != null)//判断用户是否登录
+                {
+                    int Qty = Convert.ToInt32(ViewState["ShoppingCartNumber"]);
+                    
+                    if (Qty > 0) //判断购买商品数量是否>0
+                    {
+                        if ((int)Session["UserID"] != 0)
+                        {
+                            int UserID = Convert.ToInt32(Session["UserID"]);
+                        
+                        int GoodsID = Convert.ToInt32(ViewState["GoodsID"]);
+                        DataTable goods = GoodsManager.JudgeMallYorN(UserID, GoodsID);
+                        if (goods != null && goods.Rows.Count != 0) //判断购物车是否被创建
+                        {
+                            //若购物车已经创建 里面有商品 则更新购物车
+                            decimal Tot_amt = ((decimal)(ViewState["Price"])) * (Convert.ToInt32(ViewState["ShoppingCartNumber"]));//单价乘数量                                                                                                                   
+                            int Result = GoodsManager.UpdateShoppingCart(UserID, GoodsID, Qty, Tot_amt);
+                            if (Result >= 1)
+                            {
+                                Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('加入购物车成功！');</script>");
+                                BindUserMallCart();
+                            }
+                        }
+                        else //若没有 则新建购物车
+                        {                          
+                            MallItemcart mallitemcart = new MallItemcart();
+                            mallitemcart.UserID = Convert.ToInt32(Session["UserID"]);
+                            mallitemcart.GoodsID = Convert.ToInt32(ViewState["GoodsID"]);
+                            mallitemcart.Unit_price = Convert.ToDecimal((ViewState["Price"]));
+                            mallitemcart.Qty = Convert.ToInt32(ViewState["ShoppingCartNumber"]);
+                            mallitemcart.Tot_amt = Convert.ToDecimal((ViewState["Price"])) * (Convert.ToInt32(ViewState["ShoppingCartNumber"]));
+                            int result = GoodsManager.InsertShoppingCart(mallitemcart);
+                            if (result >= 1)
+                            {
+                                Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('加入购物车成功！');</script>");
+                                BindUserMallCart();
+                            }
+                        }
+                    }
+                    }
+                    else
+                    {
+                        Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('请确定购买数量');</script>");
+                    }
+                }
+                else
+                {
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('请先登录');</script>");
+                }
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('已经卖光了。。。');</script>");
+            }
+        }       
+        }
 }

@@ -21,7 +21,7 @@ namespace Models
         {
             get; set;
         }
-        public float Unit_price
+        public decimal Unit_price
         {
             get; set;
         }
@@ -29,7 +29,7 @@ namespace Models
         {
             get; set;
         }
-        public float Tot_amt
+        public decimal Tot_amt
         {
             get; set;
         }

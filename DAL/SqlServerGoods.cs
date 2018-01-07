@@ -78,7 +78,7 @@ namespace DAL
         }
         public DataTable SelectUserID(string ID)
         {
-            string sql = "select * From Users,Associates where Associates.UserID=Users.UserID and Associates.UserID like '" + @ID + "'";
+            string sql = "select * From UserInfo,students where Students.Sno=UserInfo.UserID and Students.Sno like '" + @ID + "'";
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("@ID",ID)
@@ -88,7 +88,7 @@ namespace DAL
         }
         public DataTable SelectShoppingCart(string UserName)
         {
-            string sql = "select * from Users,MallItemCart,Goods where MallItemCart.UserID=Users.UserID and MallItemCart.GoodsID=Goods.GoodsID and Users.UserName='" + @UserName + "'";
+            string sql = "select * from UserInfo,MallItemCart,Goods where MallItemCart.UserID=UserInfo.UserID and MallItemCart.GoodsID=Goods.GoodsID and UserInfo.UserName='" + @UserName + "'";
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("@UserName",UserName)
@@ -104,8 +104,8 @@ namespace DAL
                 new SqlParameter ("@UserID",MallItemcart.UserID),
                 new SqlParameter ("@GoodsID",MallItemcart.GoodsID),
                 new SqlParameter ("@Unit_price",MallItemcart.Unit_price),
-                new SqlParameter ("@Number",MallItemcart.Qty),
-                new SqlParameter ("@TotalAmount",MallItemcart.Tot_amt)
+                new SqlParameter ("@Qty",MallItemcart.Qty),
+                new SqlParameter ("@Tot_amt",MallItemcart.Tot_amt)
             };
             return DBHelper.GetExcuteNonQuery(sql, para);
         }
@@ -120,7 +120,7 @@ namespace DAL
         }
         public DataTable SelectAllTot_amt(string UserName)
         {
-            string sql = "select SUM(Tot_amt) FinalTot_amt from Users,MallItemCart,Goods where MallItemCart.UserID=Users.UserID and MallItemCart.GoodsID=Goods.GoodsID and Users.UserName='" + @UserName + "'";
+            string sql = "select SUM(Tot_amt) as FinalTot_amt  from UserInfo,MallItemCart,Goods where MallItemCart.UserID=UserInfo.UserID and MallItemCart.GoodsID=Goods.GoodsID and UserInfo.UserName='" + @UserName + "'";
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("@UserName",UserName)
@@ -128,7 +128,7 @@ namespace DAL
             DataTable dt = DBHelper.GetFillData(sql, sp);
             return dt;
         }
-        public int UpdateShoppingCartNum(int CartID, int qty, float total)
+        public int UpdateShoppingCartNum(int CartID, int qty, decimal total)
         {
             string sql = "update MallItemCart set Qty = '" + @qty + "',Tot_amt='" + @total + "' where ShoppingCartID = '" + @CartID + "' ";
             SqlParameter[] para =
@@ -160,7 +160,7 @@ namespace DAL
             DataTable dt = DBHelper.GetFillData(sql, sp);
             return dt;
         }
-        public int UpdateShoppingCart(int UserID, int GoodsID, int Qty, float Tot_amt) //购物车有商品时做更新操作
+        public int UpdateShoppingCart(int UserID, int GoodsID, int Qty, decimal Tot_amt) //购物车有商品时做更新操作
         {
             string sql = "update MallItemCart set Qty=Qty+'" + @Qty + "',Tot_amt=Tot_amt+'" + @Tot_amt + "' where UserID='" + @UserID + "' and GoodsID='" + @GoodsID + "'";
             SqlParameter[] para =
@@ -202,10 +202,10 @@ namespace DAL
         }
         public DataTable SelectOrderItems(int Order_no) //从订单详细表查询订单详细信息
         {
-            string sql = "select * from OrderItems,Goods where Order_no='" + @Order_no+ "'and OrderItems.GoodsID=Goods.GoodsID";
+            string sql = "select * from Order_items,Goods where Order_no='" + @Order_no+ "'and Order_items.GoodsID=Goods.GoodsID";
             SqlParameter[] sp = new SqlParameter[]
             {
-                new SqlParameter("@OrderID",Order_no)
+                new SqlParameter("@Order_no",Order_no)
             };
             DataTable dt = DBHelper.GetFillData(sql, sp);
             return dt;
@@ -234,7 +234,7 @@ namespace DAL
         }
         public DataTable SelectMallComments(int GoodsID) //查询商品评论
         {
-            string sql = "select * from MallComments,Users where GoodsID='" + @GoodsID + "' and MallComments.UserID=Users.UserID Order by MallComTime desc";
+            string sql = "select * from MallComments,UserInfo where GoodsID='" + @GoodsID + "' and MallComments.UserID=UserInfo.UserID Order by Comments_time desc";
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("@GoodsID",GoodsID)
@@ -244,7 +244,7 @@ namespace DAL
         }
         public DataTable SelectReplyMallComments(int MallCommentID) //查询商品回复
         {
-            string sql = "select ReplyMallComments.*,a.UserName as 评论人,b.UserName as 回复人 from Users a,Users b,MallComments,ReplyMallComments where a.UserID=MallComments.UserID and b.UserID=ReplyMallComments.UserID and MallComments.MallCommentID=ReplyMallComments.MallCommentID and ReplyMallComments.MallCommentID='" + @MallCommentID + "'";
+            string sql = "select ReplyMallComments.*,a.UserName as 评论人,b.UserName as 回复人 from UserInfo a,UserInfo b,MallComments,ReplyMallComments where a.UserID=MallComments.UserID and b.UserID=ReplyMallComments.UserID and MallComments.MallCommentID=ReplyMallComments.MallCommentID and ReplyMallComments.MallCommentID='" + @MallCommentID + "'";
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("@MallCommentID",MallCommentID)
@@ -259,7 +259,7 @@ namespace DAL
         }
         public DataTable JudgeYorNComments(int UserID, int GoodsID) //判断用户能否对此商品评论
         {
-            string sql = "select * from Orders, OrderItems where Orders.Order_no = OrderItems.Order_no and OrderItems.GoodsID = '" + @GoodsID + "'and Orders.UserID = '" + @UserID + "'";
+            string sql = "select * from Orders, Order_items where Orders.Order_no = Order_items.Order_no and Order_items.GoodsID = '" + @GoodsID + "'and Orders.UserID = '" + @UserID + "'";
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("@GoodsID",GoodsID),

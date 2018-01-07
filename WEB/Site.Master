@@ -22,12 +22,20 @@
                             <li><a href="###">商家</a></li>     
                         </ul>      
                     </div>
-                    <div class="rol_right">
-                        <ul>
-                            <li><a href="Register.aspx">注册</a></li>                            
-                            <li><a href="Login.aspx">登录</a></li>
-                        </ul>
-                    </div>
+                     <asp:Panel runat="server" ID="HadLogin">
+                         <div class="rol_right1">
+                                <label runat="server" id="lbusername" text="" />&nbsp;&nbsp;
+                                <asp:Linkbutton runat="server" ID="lbtnregister" OnClick="lbtnregister_Click">注销</asp:Linkbutton>
+                         </div>
+                     </asp:Panel>
+                     <asp:Panel runat="server" ID="NotLogin">
+                         <div class="rol_right">
+                            <ul>
+                                <li><a href="Register.aspx">注册</a></li>                            
+                                <li><a href="Login.aspx">登录</a></li>
+                            </ul>
+                        </div>
+                     </asp:Panel>
                     <div class="clear"></div>
                  </div>           
             </div>

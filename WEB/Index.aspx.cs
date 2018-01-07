@@ -13,26 +13,25 @@ namespace WEB
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+
+            if (!IsPostBack)
             {
 
+                BindxxCourses();
+                BindczCourses();
+                BindgzCourses();
+                BindxxActivities();
+                BindczActivities();
+                BindgzActivities();
+                BindxxArticle();
+                BindczArticle();
+                BindgzArticle();
+                BindxxBooks();
+                BindczBooks();
+                BindgzBooks();
+                BindTeachers();
             }
-            BindxxCourses();
-            BindczCourses();
-            BindgzCourses();
-            BindxxActivities();
-            BindczActivities();
-            BindgzActivities();
-            BindxxArticle();
-            BindczArticle();
-            BindgzArticle();
-            BindxxBooks();
-            BindczBooks();
-            BindgzBooks();
-            BindTeachers();
-        }
-
-        
+        }      
         private void BindxxCourses()
         {
             DataTable dt = CoursesManager.SelectxxTop3();

@@ -21,10 +21,15 @@
 	    <div class="Login">
 	<h2>Register</h2>
 		<form id="form1" runat="server" action="#" method="post">
-            <asp:TextBox ID="txtName" runat="server" placeholder="请输入用户名"></asp:TextBox>
-            <asp:TextBox ID="txtPassword" runat="server" placeholder="请输入密码" TextMode="Password"></asp:TextBox>
-            <asp:TextBox ID="txtRepassword" runat="server" placeholder="请输入确认密码" TextMode="Password"></asp:TextBox>
-            <asp:TextBox ID="txtTel" runat="server" placeholder="请输入电话"></asp:TextBox>
+            <asp:TextBox ID="txtName" runat="server" placeholder="请输入用户名"></asp:TextBox><br />
+            <asp:RequiredFieldValidator ID="judgeusername" runat="server" ControlToValidate="txtName" Display="Dynamic" ErrorMessage="不能为空"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="txtPassword" runat="server" placeholder="请输入密码" TextMode="Password"></asp:TextBox><br />
+            <asp:RequiredFieldValidator ID="judgepassword" runat="server" ControlToValidate="txtPassword" Display="Dynamic" ErrorMessage="不能为空"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="txtRepassword" runat="server" placeholder="请输入确认密码" TextMode="Password"></asp:TextBox><br />
+            <asp:RequiredFieldValidator ID="judgerepassword" runat="server" ControlToValidate="txtRepassword" Display="Dynamic" ErrorMessage="不能为空"></asp:RequiredFieldValidator>
+            <asp:CompareValidator ID="comparetopwd" runat="server" ControlToValidate="txtRepassword" ControlToCompare="txtPassword" Display="Dynamic" ErrorMessage="密码输入不一致"></asp:CompareValidator>
+            <asp:TextBox ID="txtTel" runat="server" placeholder="请输入电话"></asp:TextBox><br />
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="格式错误" ValidationExpression="(\(\d{3}\)|\d{3})?\d{8}" ControlToValidate="txtTel"></asp:RegularExpressionValidator>
 			<div class="aitssendbuttonw3ls">
                 <asp:Button ID="UserAdd" runat="server" Text="立即注册" OnClick="UserAdd_Click" />
                 <asp:Label ID="lblMsg" runat="server"></asp:Label>

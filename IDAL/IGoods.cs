@@ -26,10 +26,10 @@ namespace IDAL
         int InsertShoppingCart(MallItemcart Mallitemcart);
         int DeleteShoppingCart(int ShoppingCartID);
         DataTable SelectAllTot_amt(string UserName);
-        int UpdateShoppingCartNum(int CartID, int num, float total);
+        int UpdateShoppingCartNum(int CartID, int num, decimal total);
         DataTable JudgeShoppingCart(int UserID);
         DataTable JudgeMallYorN(int UserID, int GoodsID);//判断某用户购物车是否有某商品的方法
-        int UpdateShoppingCart(int UserID, int GoodsID, int Qty, float Tot_amt);//购物车有商品时做更新操作
+        int UpdateShoppingCart(int UserID, int GoodsID, int Qty, decimal Tot_amt);//购物车有商品时做更新操作
         int InsertOrder(int UserID); //从购物车表插入订单表
         DataTable SelectOrders(int UserID); //从订单表查询某用户的订单信息
         DataTable SelectOrdersIn(int Order_no); //从订单表查询某订单的订单信息

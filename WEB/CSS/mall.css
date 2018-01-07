@@ -32,21 +32,27 @@ body{
 }
 .mall{
     text-decoration:none;
-    margin-left:100px;
+    margin-left:50px;
     margin-top:9px;
     float:left;
 }
 .function{
     text-decoration:none;
-    margin-left:50px;
+    margin-left:20px;
     margin-top:9px;
     float:left;
+}
+.LorR{
+    text-decoration:none;
+    margin-top:9px;
+    float:left;
+    margin-left:30px;
 }
 .shopcar{
     width:180px;
     border-radius:5px;
     float:left;
-    margin-left:50px;  
+    margin-left:40px;  
     margin-top:4px;
 }
 .badge {

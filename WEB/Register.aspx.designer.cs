@@ -31,6 +31,15 @@ namespace WEB {
         protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
+        /// judgeusername 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator judgeusername;
+        
+        /// <summary>
         /// txtPassword 控件。
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace WEB {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        
+        /// <summary>
+        /// judgepassword 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator judgepassword;
         
         /// <summary>
         /// txtRepassword 控件。
@@ -49,6 +67,24 @@ namespace WEB {
         protected global::System.Web.UI.WebControls.TextBox txtRepassword;
         
         /// <summary>
+        /// judgerepassword 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator judgerepassword;
+        
+        /// <summary>
+        /// comparetopwd 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator comparetopwd;
+        
+        /// <summary>
         /// txtTel 控件。
         /// </summary>
         /// <remarks>
@@ -56,6 +92,15 @@ namespace WEB {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTel;
+        
+        /// <summary>
+        /// RegularExpressionValidator1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
         /// UserAdd 控件。

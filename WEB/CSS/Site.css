@@ -29,6 +29,12 @@ body{
     height:29px;
     float:right;
 }
+.rol_right1{
+    width:10%;
+    height:29px;
+    float:right;
+    margin-right:20px;
+}
 .rol_left li{
     float:left;
 }

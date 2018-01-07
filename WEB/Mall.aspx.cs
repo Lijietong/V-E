@@ -13,6 +13,20 @@ namespace WEB
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+                if (Session["UserName"] != null)
+                {
+                    HadLogin.Visible = true;
+                    NotLogin.Visible = false;
+                    lbusername.InnerText = "欢迎您，" + Session["UserName"].ToString();
+                }
+                else
+                {
+                    NotLogin.Visible = true;
+                    HadLogin.Visible = false;
+                }
+            }
             BindAllVideo();
             BindxxVideo();
             BindczVideo();
@@ -21,6 +35,11 @@ namespace WEB
             BindxxBooks();
             BindczBooks();
             BindgzBooks();                
+        }
+        protected void lbtnregister_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("Index.aspx");
         }
         public void BindAllVideo()
         {
@@ -99,6 +118,27 @@ namespace WEB
         {
 
         }
+        protected int BindUserMallCart()
+        {
+            int UserMallCartNum;
+            if (Session["UserID"] != null)
+            {
+                int userID = Convert.ToInt32(Session["UserID"]);
+                DataTable VSS = GoodsManager.SelectUserMallCart(userID);
+                if (VSS != null && VSS.Rows.Count > 0)
+                {
+                    return UserMallCartNum = VSS.Rows.Count;
+                }
+                else
+                {
+                    return UserMallCartNum = 0;
+                }
+            }
+            else
+            {
+                return UserMallCartNum = 0;
+            }
+        }
 
         protected void DPVideo_PreRender(object sender, EventArgs e)
         {
@@ -108,6 +148,11 @@ namespace WEB
         protected void DPBooks_PreRender(object sender, EventArgs e)
         {
             LVBooks.DataBind();
+        }
+
+        protected void btnshoucar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("shoppingcar.aspx");
         }
     }
 }

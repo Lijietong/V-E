@@ -81,7 +81,7 @@ namespace BLL
         {
             return igoods.SelectAllTot_amt(UserName);
         }
-        public static int UpdateShoppingCartNum(int CartID, int num, float total)
+        public static int UpdateShoppingCartNum(int CartID, int num, decimal total)
         {
             return igoods.UpdateShoppingCartNum(CartID, num, total);
         }
@@ -93,7 +93,7 @@ namespace BLL
         {
             return igoods.JudgeMallYorN(UserID, GoodsID);
         }
-        public static int UpdateShoppingCart(int UserID, int GoodsID, int Qty, float Tot_amt)//购物车有商品时做更新操作
+        public static int UpdateShoppingCart(int UserID, int GoodsID, int Qty, decimal Tot_amt)//购物车有商品时做更新操作
         {
             return igoods.UpdateShoppingCart(UserID, GoodsID, Qty, Tot_amt);
         }

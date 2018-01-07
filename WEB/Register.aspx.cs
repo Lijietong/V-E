@@ -25,26 +25,29 @@ namespace WEB
                 SqlConnection cnn = new SqlConnection(strCnn);
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cnn;
-                string uid = txtName.Text.Trim();
-                string pwd = txtPassword.Text.Trim();
-                string tel = txtTel.Text.Trim();
-                cmd.CommandText = "insert into UserInfo(UserID,PassWord,UserName,T) values('" + uid + "','" + pwd + "','" + tel + "')";
+                string username = txtName.Text.Trim();
+                string password = txtPassword.Text.Trim();
+                string tel  = txtTel.Text.Trim();            
+                cmd.CommandText = "insert into UserInfo(UserName,PassWord,Tel) values(@UserName,@PassWord,@Tel)";
+                cmd.Parameters.AddWithValue("@UserName", username);
+                cmd.Parameters.AddWithValue("@PassWord", password);
+                cmd.Parameters.AddWithValue("@Tel", tel);
                 try
                 {
                     cnn.Open();
                     cmd.ExecuteNonQuery();
                     lblMsg.Text = "注册成功!";
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    
+                    Response.Write("用户名或密码不正确！" + ex.Message);
                 }
                 finally
                 {
                     if (cnn.State == ConnectionState.Open)
                         cnn.Close();
                 }
-                if(lblMsg.Text=="注册成功!")
+                if (lblMsg.Text == "注册成功!")
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "true", "<script>alert('注册成功！');location='Login.aspx'</script>");
                 }

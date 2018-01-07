@@ -161,6 +161,7 @@
     <Content Include="images\mall\圣诞3.jpg" />
     <Content Include="images\mall\圣诞4.jpg" />
     <Content Include="images\mall\圣诞5.jpg" />
+    <Content Include="images\mall\nothing.png" />
     <Content Include="JS\bootstrap.min.js" />
     <Content Include="JS\jquery-1.10.2.min.js" />
     <Content Include="JS\jquery-1.11.0.min.js" />
